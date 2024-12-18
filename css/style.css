@@ -51,19 +51,19 @@ h1{
 }
 .position-1 {
     grid-column: 3 / span 2;
-    grid-row: 1 / span 1;
+    grid-row: 5 / span 1;
 }
 .position-2 {
     grid-column: 4 / span 1;
-    grid-row: 2 / span 2;
+    grid-row: 3 / span 2;
 }
 .position-3 {
     grid-column: 4/ span 2;
-    grid-row: 5/ span 1;
+    grid-row: 2/ span 1;
 }
 .position-4 {
     grid-column: 8 / span 1;
-    grid-row: 6/ span 1;
+    grid-row: 1/ span 1;
 }
 .position-5 {
     grid-column: 6 / span 1;
@@ -71,12 +71,41 @@ h1{
 }
 .position-6 {
     grid-column: 9 / span 1;
-    grid-row: 7 / span 1;
+    grid-row: 4 / span 1;
 }
 .position-7 {
-    grid-column: 8 / span 2;
-    grid-row: 5 / span 1;
+    grid-column: 8 / span 1;
+    grid-row: 2 / span 1;
 }
+.position-8 {
+    grid-column: 7 / span 1;
+    grid-row: 3 / span 1;
+}
+.position-9 {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+}
+.position-10 {
+    grid-column: 3 / span 1;
+    grid-row: 4 / span 1;
+}
+.position-11 {
+    grid-column: 5 / span 1;
+    grid-row: 2 / span 1;
+}
+.position-12 {
+    grid-column: 6 / span 1;
+    grid-row: 2 / span 1;
+}
+.position-13 {
+    grid-column: 5 / span 1;
+    grid-row: 3 / span 1;
+}
+.position-14 {
+    grid-column: 9 / span 1;
+    grid-row: 1 / span 1;
+}
+
 
 
 .default-position {
