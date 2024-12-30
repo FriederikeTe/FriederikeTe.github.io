@@ -1,0 +1,72 @@
+body{
+    background-color: hwb(240 0% 78%);
+    position: relative;
+}
+body::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 20%;
+    background: repeating-linear-gradient(
+        300deg,
+        transparent,
+        transparent 20px,
+        rgba(70, 70, 70, 0.2) 20px,
+        rgba(255, 255, 255, 0.2) 21px
+    );
+    z-index: -1;
+}
+h1{
+    color: rgb(206, 255, 250);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 2px 2px 5px  rgb(206, 255, 250);
+}
+
+.grid {
+    position: relative; /* Wichtig, damit die Positionierung der Posts relativ zum Grid-Container erfolgt */
+    width: 100%;
+    height: 2000px; /* Eine feste Höhe für den Container, falls keine dynamische Höhe definiert ist */
+    overflow: hidden;
+
+}
+.post {
+    animation: top-to-bottom 60s alternate 3s;
+    position: absolute; /* Ermöglicht absolute Positionierung */
+    width: 150px; /* Setze eine feste Breite für die Posts */
+    height: auto;
+}
+.post:hover {
+    animation-play-state: paused;
+}
+
+.post img {
+    width: 70px;
+    height: auto;
+    margin-bottom: 2px;
+    box-shadow: 0 0 15px 5px rgba(72, 194, 255, 0.2);
+    filter: blur(1px)
+}
+.post img:hover {
+    filter: none;
+}
+@keyframes top-to-bottom {
+    0%{
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(100%);
+
+    }
+}
+
+.post p {
+    font-size: 1.0rem;
+    margin-top: 2px;
+    color: rgb(206, 255, 250);
+    text-shadow: 2px 2px 5px  rgb(206, 255, 250);
+}
+
