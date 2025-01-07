@@ -35,9 +35,10 @@ document.addEventListener("DOMContentLoaded", () => {
         post.style.transform = `translateZ(${randomZ}px) translateX(${randomX}px) translateY(${randomY}px) scale(${clampedScale})`;
         post.style.animation = `fall ${animationDuration}s linear infinite`;
     });
+    const modal = document.querySelector(".modal");
+    const overlay = document.querySelector(".modal-overlay");
     const postLinks = document.querySelectorAll(".open-post");
-    const modal = document.getElementById("post-modal");
-    const closeModalButton = document.getElementById("close-modal");
+    modal.style.display = "none";
     
     postLinks.forEach(link => {
         link.addEventListener("click", event => {
@@ -54,19 +55,21 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById("modal-image").src = image;
 
             // Zeige das Modal an
-            modal.style.display = "block";
+            modal.style.display = "flex";
+            overlay.style.display = "block";
         });
     });
 
-    // Schließe das Modal, wenn auf das Schließen-Symbol geklickt wird
-    closeModalButton.addEventListener("click", () => {
+    overlay.addEventListener("click", () => {
         modal.style.display = "none";
+        overlay.style.display = "none";
     });
 
-    // Schließe das Modal, wenn der Benutzer außerhalb des Modals klickt
-    window.addEventListener("click", event => {
-        if (event.target === modal) {
-            modal.style.display = "none";
+    window.addEventListener("resize", () => {
+        if (modal.style.display === "block") {
+            modal.style.top = "50%";
+            modal.style.left = "50%";
+            modal.style.transform = "translate(-50%, -50%)";
         }
     });
 
