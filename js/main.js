@@ -18,24 +18,23 @@ document.addEventListener("DOMContentLoaded", () => {
         post.style.left = `${randomLeft}px`;
         post.style.top = `${randomTop}px`;
     });
-    posts.forEach(post => {
-        // Zufällige Positionen und Tiefe generieren
-        const randomZ = Math.random() * 800 - 400; // Werte zwischen -400px und 400px
-        const randomX = Math.random() * window.innerWidth - window.innerWidth / 2;
-        const randomY = Math.random() * containerHeight - containerHeight / 2;
-
-        // Skalierung basierend auf Z-Position
-        const scale = 1 + (400 - randomZ) / 400;
-        const clampedScale = Math.min(Math.max(scale, 0.8), 2.5);
-        console.log(`Z: ${randomZ}, Scale: ${clampedScale}`);
-
-        // Geschwindigkeit basierend auf der Z-Position
-        const speed = 2 + (400 - randomZ) / 100; // Schnellere Geschwindigkeit für vordere Posts
-        const animationDuration = Math.max(20, 40 - speed); // Dauer zwischen 2s (schnell) und 10s (langsam)
-
-        // Initiale Position und Animation anwenden
-        post.style.transform = `translateZ(${randomZ}px) translateX(${randomX}px) translateY(${randomY}px) scale(${clampedScale})`;
+    posts.forEach((post, index) => {
+        const randomZ = Math.random() * 800 - 400; // Zufällige Z-Position
+        const randomX = Math.random() * window.innerWidth; // Werte zwischen 0 und Fensterbreite
+        const randomY = Math.random() * containerHeight - containerHeight / 2; // Zufällige Y-Position
+        const startY = Math.random() * -500; // Zufällige Start-Y-Position (oberhalb des Bildschirms)
+    
+        const scale = Math.max(0.8, Math.min(2.5, 1 - randomZ / 400)); // Skaliert nach Z
+        const speedFactor = (400 - randomZ) / 400; // Geschwindigkeit abhängig von Tiefe
+        const animationDuration = 10 + speedFactor * 30; // Dauer: 10s bis 40s
+        const animationDelay = Math.random() * 5; // Zufällige Verzögerung (0 bis 5 Sekunden)
+    
+        post.style.transform = `translateZ(${randomZ}px) translateX(${randomX}px) translateY(${startY}px) scale(${scale})`;
         post.style.animation = `fall ${animationDuration}s linear infinite`;
+        post.style.animationDelay = `${animationDelay}s`;
+        post.style.zIndex = Math.round(400 - randomZ);
+    
+        console.log(`Post ${index + 1}: X=${randomX}, Y=${randomY}, Z=${randomZ}, Scale=${scale}, Duration=${animationDuration}, Delay=${animationDelay}`);
     });
     const modal = document.querySelector(".modal");
     const overlay = document.querySelector(".modal-overlay");
@@ -59,6 +58,9 @@ document.addEventListener("DOMContentLoaded", () => {
             // Zeige das Modal an
             modal.style.display = "flex";
             overlay.style.display = "block";
+
+            const downloadLink = document.getElementById("modal-download");
+            downloadLink.href = file; 
         });
     });
 
