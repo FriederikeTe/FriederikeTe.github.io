@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error("Der .grid-Container hat keine sichtbare Größe.");
         return;
     }
+  
 
     posts.forEach(post => {
         const randomLeft = Math.random() * (containerWidth - 150); // Abzug für Post-Breite
@@ -24,8 +25,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const randomY = Math.random() * containerHeight - containerHeight / 2;
 
         // Skalierung basierend auf Z-Position
-        const scale = 1 + (400 - randomZ) / 6000;
-        const clampedScale = Math.min(Math.max(scale, 0.8), 1.2);
+        const scale = 1 + (400 - randomZ) / 400;
+        const clampedScale = Math.min(Math.max(scale, 0.8), 2.5);
+        console.log(`Z: ${randomZ}, Scale: ${clampedScale}`);
 
         // Geschwindigkeit basierend auf der Z-Position
         const speed = 2 + (400 - randomZ) / 100; // Schnellere Geschwindigkeit für vordere Posts

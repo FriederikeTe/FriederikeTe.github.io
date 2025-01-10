@@ -1,5 +1,5 @@
 body{
-    background-color: hwb(240 0% 78%);
+    background-color: hwb(240 0% 87%);
     position: relative;
     perspective: 1000px;
 }
@@ -22,13 +22,19 @@ body::before {
 }
     */
 .Ueberschrift{
-    color: rgb(206, 255, 250);
+    color: rgba(255, 255, 255, 0.348);
     position: absolute;
-    top: 10%;
-    left: 20%;
-    text-shadow: 2px 2px 5px  rgb(206, 255, 250);
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 2px 2px 5px  rgb(255, 255, 255);
     z-index: -10;
-    font-size: 10em;
+    font-size: 4em;
+    /*writing-mode: vertical-rl;*/
+    font-family: "ltr-ncnd-variable", sans-serif;
+    font-variation-settings: "wght" 250;
+    letter-spacing: 5px;
+    
 }
 
 .grid {
@@ -44,19 +50,19 @@ body::before {
     position: absolute; 
     width: 150px; 
     height: auto;
-    transform: scale(1.1);
+    transform: scale(1);
 }
 .post:hover {
     animation-play-state: paused;
 }
 
 .post img {
-    width: auto;
+    width: 100%;
     height: auto;
-    max-width: 100%;
-    max-height: 100%;
+    max-width: none;
+    max-height: none;
     margin-bottom: 2px;
-    box-shadow: 0 0 15px 5px rgba(72, 194, 255, 0.2);
+    box-shadow: 0 0 15px 5px rgba(228, 246, 255, 0.359);
     filter: blur(1px)
 }
 .post img:hover {
@@ -74,8 +80,19 @@ body::before {
 .post p {
     font-size: 1.0rem;
     margin-top: 2px;
-    color: rgb(206, 255, 250);
-    text-shadow: 2px 2px 5px  rgb(206, 255, 250);
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 5px  rgba(255, 255, 255, 0.811);
+    font-family: "ltr-ncnd-variable", sans-serif;
+    font-variation-settings: "wght" 250;
+}
+
+.post a {
+    text-decoration: none;
+}
+.note {
+    width: 250px;
+    text-align: center;
+    color: rgb(127, 16, 16);
 }
 
 .modal {
@@ -87,7 +104,7 @@ body::before {
     width: 90%; 
     max-width: 600px; 
     height: auto; 
-    background-color: rgba(0, 0, 0, 0.7); 
+    /*background-color: rgba(0, 0, 0, 0.7); */
     border-radius: 8px; 
     z-index: 1000; 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
@@ -101,6 +118,9 @@ body::before {
     max-width: 600px;
     width: 90%;
     text-align: center;
+    color: white;
+    font-family: "ltr-ncnd-variable", sans-serif;
+    font-variation-settings: "wght" 250;
 }
 .modal-overlay {
     position: fixed;
