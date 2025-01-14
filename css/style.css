@@ -22,18 +22,16 @@ body::before {
 }
     */
 .Ueberschrift{
-    color: rgba(255, 255, 255, 0.348);
+    color: rgba(255, 255, 255, 0.245);
     position: absolute;
     top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-shadow: 2px 2px 5px  rgb(255, 255, 255);
+    text-shadow: 2px 2px 5px  rgba(255, 255, 255, 0.84);
     z-index: -10;
     font-size: 4em;
     /*writing-mode: vertical-rl;*/
-    font-family: "ltr-ncnd-variable", sans-serif;
-    font-variation-settings: "wght" 250;
-    letter-spacing: 5px;
+    font-family: "Fungal200", sans-serif;
     
 }
 
@@ -85,17 +83,29 @@ body::before {
     margin-top: 2px;
     color: rgb(255, 255, 255);
     text-shadow: 2px 2px 5px  rgba(255, 255, 255, 0.811);
-    font-family: "ltr-ncnd-variable", sans-serif;
-    font-variation-settings: "wght" 250;
+    font-family: "Fungal100", sans-serif;
+    
 }
 
 .post a {
     text-decoration: none;
 }
 .note {
+    top: 20%;
+    left: 40%;
     width: 250px;
-    text-align: center;
+    text-align: left;
     color: rgba(255, 255, 255, 0.74);
+    z-index: -10;
+    font-family: "Fungal100", sans-serif;
+}
+.note2 {
+    display: flex;
+    width: 250px;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.74);
+    font-family: "Fungal100", sans-serif;
+    z-index: -10;
 }
 
 .center {
@@ -118,6 +128,7 @@ body::before {
     z-index: 1000; 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
     overflow: hidden;
+    animation: fall 10s linear infinite; 
 }
 
 .modal-content {
