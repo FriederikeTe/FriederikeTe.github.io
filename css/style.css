@@ -3,36 +3,22 @@ body{
     position: relative;
     perspective: 1000px;
 }
-/*
-body::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 20%;
-    background: repeating-linear-gradient(
-        300deg,
-        transparent,
-        transparent 20px,
-        rgba(70, 70, 70, 0.2) 20px,
-        rgba(255, 255, 255, 0.2) 21px
-    );
-    z-index: -1;
-}
-    */
 .Ueberschrift{
-    color: rgba(255, 255, 255, 0.245);
+    color: rgb(255, 255, 255);
     position: absolute;
-    top: 20%;
-    left: 50%;
+    top: 2%;
+    left: 17%;
     transform: translate(-50%, -50%);
     text-shadow: 2px 2px 5px  rgba(255, 255, 255, 0.84);
     z-index: -10;
     font-size: 4em;
     /*writing-mode: vertical-rl;*/
-    font-family: "Fungal200", sans-serif;
+    font-family: "Fungal1000", sans-serif;
     
+}
+.Ueberschrift:hover ~ .note {
+    opacity: 1;    
+
 }
 
 .grid {
@@ -49,22 +35,42 @@ body::before {
     position: absolute; 
     width: 150px; 
     height: auto;
-    transform: scale(1);
+    transform: none;
     transform-style: preserve-3d;
+    
+
 
 }
+.mask img {
+    -webkit-mask-image: url(/masks/Maske_03.png) no-repeat center / contain;
+    mask-image: url(/masks/Maske_03.png) /*no-repeat center  contain */;
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    object-fit: cover;
+    width: 150px;
+    height: auto;
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;
+
+}
+.mask {
+    position: relative;
+    background: url(/masks/Maske_03.png) /*no-repeat center / contain*/;
+    
+} 
 .post:hover {
     animation-play-state: paused;
 }
 
 .post img {
-    width: 100%;
-    height: auto;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
     max-width: none;
     max-height: none;
     margin-bottom: 2px;
     box-shadow: 0 0 15px 5px rgba(228, 246, 255, 0.359);
-    filter: blur(1px)
+    /*filter: blur(1px)*/
 }
 .post img:hover {
     filter: none;
@@ -78,12 +84,23 @@ body::before {
     }
 }
 
+@keyframes down {
+    0% {
+        transform: translateY(-10%);
+    }
+    100% {
+        transform: translateY(50%);
+    }
+}
+
 .post p {
     font-size: 1.0rem;
-    margin-top: 2px;
+    margin-top: 1px;
     color: rgb(255, 255, 255);
     text-shadow: 2px 2px 5px  rgba(255, 255, 255, 0.811);
     font-family: "Fungal100", sans-serif;
+    font-variant-caps: small-caps;
+    text-align: center;
     
 }
 
@@ -91,6 +108,8 @@ body::before {
     text-decoration: none;
 }
 .note {
+    opacity: 0;
+    position: absolute;
     top: 20%;
     left: 40%;
     width: 250px;
@@ -99,8 +118,11 @@ body::before {
     z-index: -10;
     font-family: "Fungal100", sans-serif;
 }
-.note2 {
-    display: flex;
+.note:nth-of-type(2) {
+    opacity: 0;
+    position: absolute;
+    top: 10%;
+    left: 30%;
     width: 250px;
     text-align: left;
     color: rgba(255, 255, 255, 0.74);
@@ -123,12 +145,12 @@ body::before {
     width: 90%; 
     max-width: 600px; 
     height: auto; 
-    /*background-color: rgba(0, 0, 0, 0.7); */
+    background-color: hwb(240 0% 87%); 
     border-radius: 8px; 
     z-index: 1000; 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.599); 
     overflow: hidden;
-    animation: fall 10s linear infinite; 
+    animation: down 20s linear infinite; 
 }
 
 .modal-content {
@@ -139,8 +161,8 @@ body::before {
     width: 90%;
     text-align: center;
     color: white;
-    font-family: "ltr-ncnd-variable", sans-serif;
-    font-variation-settings: "wght" 250;
+    font-family: "Fungal100", sans-serif;
+    
 }
 .modal-overlay {
     position: fixed;
@@ -150,5 +172,12 @@ body::before {
     height: 100%; 
     z-index: 999; 
     display: none; 
+}
+.btn-download {
+    text-decoration: none;
+    color: white;
+}
+.btn-download:hover {
+    text-decoration: underline dotted white 3px;
 }
 

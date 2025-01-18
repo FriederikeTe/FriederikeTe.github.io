@@ -16,3 +16,7 @@
     font-family: Fungal100;
     src: url(/fonts/Fungal-Grow100.woff);
 }
+@font-face {
+    font-family: Fungal1000;
+    src: url(/fonts/Fungal-Grow1000.woff);
+}
