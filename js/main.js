@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const postLinks = document.querySelectorAll(".open-post");
     modal.style.display = "none";
     
-    postLinks.forEach(link => {
+    /*postLinks.forEach(link => {
         link.addEventListener("click", event => {
             event.preventDefault();
 
@@ -57,6 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
             overlay.style.display = "block";
         });
     });
+    */
 
     overlay.addEventListener("click", () => {
         modal.style.display = "none";
