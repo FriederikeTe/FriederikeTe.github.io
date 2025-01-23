@@ -5,6 +5,7 @@ body{
     overflow: auto;
 }
 .Ueberschrift{
+    display: inline;
     color: rgb(255, 255, 255);
     position: sticky;
     top: 0;
@@ -13,9 +14,8 @@ body{
     text-shadow: 2px 2px 5px  rgba(255, 255, 255, 0.84);
     z-index: 10;
     font-size: 2.5rem;
-    /*writing-mode: vertical-rl;*/
-    font-family: "scale-variable", sans-serif;
-    font-variation-settings: "wght" 80, "wdth" 100;
+    font-family: "cmunti";
+    /*font-variation-settings: "wght" 80, "wdth" 100;*/
     background-color: transparent;
     
 }
@@ -24,11 +24,34 @@ body{
 
 }
 
+.note {
+    opacity: 0;
+    position: absolute;
+    top: 0%;
+    left: 22%;
+    /*width: 250px;*/
+    text-align: left;
+    color: rgba(255, 255, 255, 0.74);
+    z-index: -10;
+    font-family: "cmunti";
+}
+.note:nth-of-type(2) {
+    opacity: 0;
+    position: absolute;
+    top: 2%;
+    left: 22%;
+    /*width: 250px;*/
+    text-align: left;
+    color: rgba(255, 255, 255, 0.74);
+    font-family: "cmunti";
+    z-index: -10;
+}
+
 .grid {
     position: relative;
     width: 100%;
     height: 2000px;
-    /*overflow: hidden;*/
+    overflow: visible;
     transform-style: preserve-3d;
     perspective: 2000px;
     
@@ -45,13 +68,14 @@ body{
 
 
 }
+
 .mask img {
     -webkit-mask-image: url(/masks/Maske_03.png) no-repeat center / contain;
-    mask-image: url(/masks/Maske_03.png) /*no-repeat center  contain */;
+    mask-image: url(/masks/Maske_03.png) /*no-repeat center  contain*/ ;
     mask-repeat: no-repeat;
     mask-size: cover;
     object-fit: cover;
-    width: 150px;
+    width: 160px;
     height: auto;
     mask-composite: intersect;
     -webkit-mask-composite: source-in;
@@ -62,6 +86,8 @@ body{
     background: url(/masks/Maske_03.png) /*no-repeat center / contain*/;
     
 } 
+    
+    
 .post:hover {
     animation-play-state: paused;
 }
@@ -102,9 +128,8 @@ body{
     margin-top: 1px;
     color: rgb(255, 255, 255);
     text-shadow: 2px 2px 5px  rgba(255, 255, 255, 0.811);
-    font-family: "scale-variable", sans-serif;
-    font-variation-settings: "wght" 100, "wdth" 110;
-    font-variant-caps: small-caps;
+    font-family: "cmunti";
+    /*font-variant-caps: small-caps;*/
     text-align: center;
     
 }
@@ -112,39 +137,30 @@ body{
 .post a {
     text-decoration: none;
 }
-.note {
-    opacity: 0;
-    position: absolute;
-    top: 20%;
-    left: 40%;
-    width: 250px;
-    text-align: left;
-    color: rgba(255, 255, 255, 0.74);
-    z-index: -10;
-    font-family: "scale-variable", sans-serif;
-    font-variation-settings: "wght" 80, "wdth" 100;
-}
-.note:nth-of-type(2) {
-    opacity: 0;
-    position: absolute;
-    top: 10%;
-    left: 30%;
-    width: 250px;
-    text-align: left;
-    color: rgba(255, 255, 255, 0.74);
-    font-family: "scale-variable", sans-serif;
-    font-variation-settings: "wght" 80, "wdth" 100;
-    z-index: -10;
-}
 
-.center {
-    display: flex;
-    justify-content: center;
-    position: fixed;
-}
+
 details summary {
     list-style: none;
 }
+details .details-content {
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    width: 300px;
+    height: auto;
+    z-index: 1000;
+    animation: none;
+
+
+}
+details .details-content img {
+    width: 100%;
+    height: auto;
+}
+details[open] .details-content {
+    display: block;
+}
+
 /*
 
 .modal {
@@ -188,6 +204,10 @@ details summary {
 .btn-download {
     text-decoration: none;
     color: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) ;
+    font-family: "cmunti";
 }
 .btn-download:hover {
     text-decoration: underline dotted white 3px;

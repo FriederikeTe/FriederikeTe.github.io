@@ -30,14 +30,29 @@ document.addEventListener("DOMContentLoaded", () => {
         post.style.animation = `fall ${animationDuration}s linear infinite`;
         post.style.animationDelay = `${animationDelay}s`;
         post.style.zIndex = Math.round(400 - randomZ);
-    });
 
+         // Event-Listener: Animation für ausgeklappte Inhalte stoppen
+         post.addEventListener("click", () => {
+            if (post.classList.contains("expanded")) {
+                // Animation zurücksetzen (wenn bereits ausgeklappt)
+                post.classList.remove("expanded");
+                post.style.animation = `fall ${animationDuration}s linear infinite`; // Animation wieder aktivieren
+            } else {
+                // Animation stoppen (beim Ausklappen)
+                post.classList.add("expanded");
+                post.style.animation = "none"; // Animation anhalten
+                post.style.transform = "none"; // Transformation zurücksetzen, wenn gewünscht
+            }
+        });
+
+    });
+/*
     const modal = document.querySelector(".modal");
     const overlay = document.querySelector(".modal-overlay");
     const postLinks = document.querySelectorAll(".open-post");
     modal.style.display = "none";
     
-    /*postLinks.forEach(link => {
+    postLinks.forEach(link => {
         link.addEventListener("click", event => {
             event.preventDefault();
 
@@ -57,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
             overlay.style.display = "block";
         });
     });
-    */
+    
 
     overlay.addEventListener("click", () => {
         modal.style.display = "none";
@@ -71,6 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
             modal.style.transform = "translate(-50%, -50%)";
         }
     });
+    */
 
 
 });
