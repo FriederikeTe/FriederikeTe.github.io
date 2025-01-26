@@ -46,47 +46,43 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
     });
-/*
-    const modal = document.querySelector(".modal");
-    const overlay = document.querySelector(".modal-overlay");
-    const postLinks = document.querySelectorAll(".open-post");
-    modal.style.display = "none";
+    const masks = [
+        "Maske_02.png",
+        "Maske_03.png",
+        "Maske_04.png",
+        "Maske_05.png",
+        "Maske_06.png",
+        "Maske_07.png",
+        "Maske_08.png",
+        "Maske_09.png",
+        "Maske_10.png",
+        "Maske_11.png",
+        "Maske_12.png",
+      ];
     
-    postLinks.forEach(link => {
-        link.addEventListener("click", event => {
-            event.preventDefault();
-
-            // Extrahiere Daten aus den `data-*` Attributen
-            const title = link.getAttribute("data-title");
-            const description = link.getAttribute("data-description");
-            const image = link.getAttribute("data-image");
-
-            // Setze die Modal-Daten
-            document.getElementById("modal-title").textContent = title;
-            document.getElementById("modal-description").textContent = description;
-            document.getElementById("modal-image").src = image;
-            document.getElementById("modal-download").href = image;
-
-            // Zeige das Modal an
-            modal.style.display = "flex";
-            overlay.style.display = "block";
-        });
-    });
+      // Pfad zu den Masken (falls in einem Unterordner wie /masks/)
+      const maskPath = "/masks/";
     
-
-    overlay.addEventListener("click", () => {
-        modal.style.display = "none";
-        overlay.style.display = "none";
-    });
-
-    window.addEventListener("resize", () => {
-        if (modal.style.display === "block") {
-            modal.style.top = "50%";
-            modal.style.left = "50%";
-            modal.style.transform = "translate(-50%, -50%)";
-        }
-    });
-    */
+      // Wähle alle Bilder mit der Klasse "masked-image"
+      const images = document.querySelectorAll(".masked-image");
+    
+      // Wende zufällige Masken auf jedes Bild an
+      images.forEach((image) => {
+        // Wähle eine zufällige Maske aus
+        const randomMask = masks[Math.floor(Math.random() * masks.length)];
+    
+        // Setze die Maske auf das Bild
+        image.style.maskImage = `url('${maskPath}${randomMask}')`;
+        image.style.webkitMaskImage = `url('${maskPath}${randomMask}')`;
+    
+        // Optional: Stelle sicher, dass die Maske korrekt gestylt ist
+        image.style.maskSize = "cover";
+        image.style.webkitMaskSize = "cover";
+        image.style.maskRepeat = "no-repeat";
+        image.style.webkitMaskRepeat = "no-repeat";
+        image.style.maskPosition = "center";
+        image.style.webkitMaskPosition = "center";
+      });
 
 
 });

@@ -1,14 +1,16 @@
 body{
     background-color: hwb(240 0% 87%);
     position: relative;
-    perspective: 1000px;
-    overflow: auto;
+    /*perspective: 1000px;*/
+    overflow-y: scroll;
 }
-.Ueberschrift{
-    display: inline;
-    color: rgb(255, 255, 255);
+.container-headlline {
     position: sticky;
     top: 0;
+    z-index: 1000;
+}
+.Ueberschrift{
+    color: rgb(255, 255, 255);
     /*left: 17%;*/
     /*transform: translateX(-50%);*/
     text-shadow: 2px 2px 5px  rgba(255, 255, 255, 0.84);
@@ -17,6 +19,7 @@ body{
     font-family: "cmunti";
     /*font-variation-settings: "wght" 80, "wdth" 100;*/
     background-color: transparent;
+    /*text-transform: uppercase;*/
     
 }
 .Ueberschrift:hover ~ .note {
@@ -28,23 +31,12 @@ body{
     opacity: 0;
     position: absolute;
     top: 0%;
-    left: 22%;
-    /*width: 250px;*/
+    left: 18%;
+    width: 250px;
     text-align: left;
     color: rgba(255, 255, 255, 0.74);
     z-index: -10;
     font-family: "cmunti";
-}
-.note:nth-of-type(2) {
-    opacity: 0;
-    position: absolute;
-    top: 2%;
-    left: 22%;
-    /*width: 250px;*/
-    text-align: left;
-    color: rgba(255, 255, 255, 0.74);
-    font-family: "cmunti";
-    z-index: -10;
 }
 
 .grid {
@@ -83,7 +75,6 @@ body{
 }
 .mask {
     position: relative;
-    background: url(/masks/Maske_03.png) /*no-repeat center / contain*/;
     
 } 
     
@@ -139,10 +130,10 @@ body{
 }
 
 
-details summary {
+.details1 summary {
     list-style: none;
 }
-details .details-content {
+.details1 .details-content {
     position: fixed;
     top: 100px;
     left: 50%;
@@ -153,54 +144,34 @@ details .details-content {
 
 
 }
-details .details-content img {
+.details1 .details-content img {
     width: 100%;
     height: auto;
 }
-details[open] .details-content {
+.details1[open] .details-content {
     display: block;
 }
-
-/*
-
-.modal {
-    display: none;
-    position: fixed; 
-    top: 50vh;
-    left: 50vw;
-    transform: translate(-50%, -50%);
-    width: 90%; 
-    max-width: 600px; 
-    height: auto; 
-    background-color: hwb(240 0% 87%); 
-    border-radius: 8px; 
-    z-index: 1000; 
-    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.599); 
-    overflow: hidden;
-    animation: down 20s linear infinite; 
-}
-
-.modal-content {
-    background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    padding: 20px;
-    max-width: 600px;
-    width: 90%;
-    text-align: center;
-    color: white;
-    font-family: "Fungal100", sans-serif;
-    
-}
-.modal-overlay {
-    position: fixed;
+.details2 {
     top: 0;
-    left: 0;
-    width: 100%; 
-    height: 100%; 
-    z-index: 999; 
-    display: none; 
+    margin-top: 0;
+    left: 96%;
+    position: absolute;
+   /* z-index: 1000;*/
+    transition: transform 0.3s ease;
 }
-    */
+.details2[open] {
+    
+    transform: translateX(-30%);
+}
+form {
+    color: white;
+}
+.upload-btn {
+    color: white;
+    font-family: "cmunti";
+    z-index: 1000;
+}
+
 .btn-download {
     text-decoration: none;
     color: white;
