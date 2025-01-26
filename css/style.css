@@ -61,22 +61,18 @@ body{
 
 }
 
-.mask img {
-    -webkit-mask-image: url(/masks/Maske_03.png) no-repeat center / contain;
-    mask-image: url(/masks/Maske_03.png) /*no-repeat center  contain*/ ;
-    mask-repeat: no-repeat;
-    mask-size: cover;
-    object-fit: cover;
-    width: 160px;
+.masked-image {
+    /* Standard-Fallback */
+    display: block;
+    width: 100%;
     height: auto;
-    mask-composite: intersect;
-    -webkit-mask-composite: source-in;
-
-}
-.mask {
-    position: relative;
-    
-} 
+    object-fit: cover; /* Falls gewünscht */
+  }
+  
+  .masked-image[style*="mask-image"] {
+    /* Nur anwenden, wenn Maskierung verfügbar ist */
+    background-color: transparent;
+  }
     
     
 .post:hover {
