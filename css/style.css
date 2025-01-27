@@ -62,15 +62,13 @@ body{
 }
 
 .masked-image {
-    /* Standard-Fallback */
     display: block;
     width: 100%;
     height: auto;
-    object-fit: cover; /* Falls gewünscht */
+    object-fit: cover; 
   }
   
   .masked-image[style*="mask-image"] {
-    /* Nur anwenden, wenn Maskierung verfügbar ist */
     background-color: transparent;
   }
     
@@ -87,7 +85,6 @@ body{
     max-height: none;
     margin-bottom: 2px;
     box-shadow: 0 0 15px 5px rgba(228, 246, 255, 0.359);
-    /*filter: blur(1px)*/
 }
 .post img:hover {
     filter: none;
