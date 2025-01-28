@@ -58,6 +58,14 @@ document.addEventListener("DOMContentLoaded", () => {
         "Maske_10.png",
         "Maske_11.png",
         "Maske_12.png",
+        "Maske_13.png",
+        "Maske_14.png",
+        "Maske_15.png",
+        "Maske_16.png",
+        "Maske_17.png",
+        "Maske_18.png",
+        "Maske_19.png",
+        "Maske_20.png",
       ];
     
       // Pfad zu den Masken (falls in einem Unterordner wie /masks/)

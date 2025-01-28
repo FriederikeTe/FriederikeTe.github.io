@@ -56,9 +56,6 @@ body{
     height: auto;
     transform: none;
     transform-style: preserve-3d;
-    
-
-
 }
 
 .masked-image {
@@ -70,6 +67,7 @@ body{
   
   .masked-image[style*="mask-image"] {
     background-color: transparent;
+
   }
     
     
@@ -84,7 +82,6 @@ body{
     max-width: none;
     max-height: none;
     margin-bottom: 2px;
-    box-shadow: 0 0 15px 5px rgba(228, 246, 255, 0.359);
 }
 .post img:hover {
     filter: none;
@@ -145,12 +142,22 @@ body{
     display: block;
 }
 .details2 {
+    background: url(/buttons/Umriss.png) no-repeat;
+    background-size: 60px;
+    background-position: left top;
     top: 0;
     margin-top: 0;
     left: 96%;
     position: absolute;
    /* z-index: 1000;*/
     transition: transform 0.3s ease;
+    font-family: "cmunti";
+    list-style: none;
+    height: 60px;
+    width: 130px;
+}
+.details2 summary {
+    list-style: none;
 }
 .details2[open] {
     
