@@ -159,6 +159,9 @@ body{
 .details2 summary {
     list-style: none;
 }
+.details2 summary::-webkit-details-marker {
+    display: none; 
+}
 .details2[open] {
     
     transform: translateX(-30%);
