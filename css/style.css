@@ -3,24 +3,25 @@ body{
     position: relative;
     /*perspective: 1000px;*/
     overflow-y: scroll;
+    top: 0;
+    margin: 0;
 }
+
 .container-headlline {
-    position: sticky;
     top: 0;
     z-index: 1000;
+    left: 2px;
 }
 .Ueberschrift{
+    position: fixed;
     color: rgb(255, 255, 255);
-    /*left: 17%;*/
-    /*transform: translateX(-50%);*/
     text-shadow: 2px 2px 5px  rgba(255, 255, 255, 0.84);
-    z-index: 10;
+    z-index: 1000;
     font-size: 2.5rem;
     font-family: "cmunti";
-    /*font-variation-settings: "wght" 80, "wdth" 100;*/
-    background-color: transparent;
-    /*text-transform: uppercase;*/
-    
+    background-color: transparent; 
+    margin-top: -0px;
+    left: 1%;
 }
 .Ueberschrift:hover ~ .note {
     opacity: 1;    
@@ -30,7 +31,7 @@ body{
 .note {
     opacity: 0;
     position: absolute;
-    top: 0%;
+    top: 10%;
     left: 18%;
     width: 250px;
     text-align: left;
@@ -40,12 +41,13 @@ body{
 }
 
 .grid {
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 2000px;
     overflow: visible;
     transform-style: preserve-3d;
     perspective: 2000px;
+    margin: 0;
     
 
 }
@@ -108,7 +110,7 @@ body{
     font-size: 0.7rem;
     margin-top: 1px;
     color: rgb(255, 255, 255);
-    text-shadow: 2px 2px 5px  rgba(255, 255, 255, 0.811);
+   /* text-shadow: 2px 2px 5px  rgba(255, 255, 255, 0.811);*/
     font-family: "cmunti";
     /*font-variant-caps: small-caps;*/
     text-align: center;
@@ -118,12 +120,11 @@ body{
 .post a {
     text-decoration: none;
 }
-
-
 .details1 summary {
     list-style: none;
 }
-.details1 .details-content {
+
+.details1 .details1-content {
     position: fixed;
     top: 100px;
     left: 50%;
@@ -131,30 +132,42 @@ body{
     height: auto;
     z-index: 1000;
     animation: none;
-
+}
+.details1-title {
+    font-size: 1rem;
+    color: white;
+    font-family: "cmunti";
+    text-align: center;
 
 }
-.details1 .details-content img {
+.details1 summary::-webkit-details-marker {
+    display: none; 
+}
+.details1 .details1-content img {
     width: 100%;
     height: auto;
 }
-.details1[open] .details-content {
+
+.details1[open] .details1-content {
     display: block;
 }
+
+.image-gallery {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
 .details2 {
-    background: url(/buttons/Umriss.png) no-repeat;
-    background-size: 60px;
-    background-position: left top;
-    top: 0;
-    margin-top: 0;
-    left: 96%;
-    position: absolute;
-   /* z-index: 1000;*/
+    position: fixed;
+    top: 1%;
+    left: 95%;
+    z-index: 1000;
     transition: transform 0.3s ease;
     font-family: "cmunti";
     list-style: none;
     height: 60px;
     width: 130px;
+    color: white;
 }
 .details2 summary {
     list-style: none;
@@ -162,21 +175,30 @@ body{
 .details2 summary::-webkit-details-marker {
     display: none; 
 }
-.details2 summary::marker {
-    display: none;
-}
-.details2[open] {
-    
-    transform: translateX(-30%);
+.details2[open] form {   
+    transform: translateX(-250px);
+    transition: transform 0.4s ease;
 }
 form {
     color: white;
 }
+input,
+textarea,
+send,
+button {
+    font-family: "cmunti";
+    text-transform: lowercase;
+    color: hwb(240 0% 87%);
+}
+.details2 > p {
+    color: hwb(240 0% 87%);
+}
+/*
 .upload-btn {
     color: white;
     font-family: "cmunti";
     z-index: 1000;
-}
+}*/
 
 .btn-download {
     text-decoration: none;
@@ -185,6 +207,7 @@ form {
     left: 50%;
     transform: translateX(-50%) ;
     font-family: "cmunti";
+    font-size: 0.7rem;
 }
 .btn-download:hover {
     text-decoration: underline dotted white 3px;

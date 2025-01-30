@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const scale = Math.max(0.6, Math.min(2.5, 1 - randomZ / 400)); // Skaliert nach Z
         const speedFactor = (400 + randomZ) / 400; // Geschwindigkeit abhängig von Tiefe
         const animationDuration = 10 + speedFactor * 30; // Dauer: 10s bis 40s
-        const animationDelay = Math.random() * 6; // Zufällige Verzögerung (0 bis 5 Sekunden)
+        const animationDelay = Math.random() * 3; // Zufällige Verzögerung (0 bis 5 Sekunden)
         post.style.left = `${randomLeft}px`;
         post.style.top = `${randomTop}px`;
         post.style.transform = `translateZ(${randomZ}px) translateX(${randomX}px) translateY(${startY}px)`;
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 post.style.transform = "none"; // Transformation zurücksetzen, wenn gewünscht
             }
         });
-
+        
     });
     const masks = [
         "Maske_02.png",
