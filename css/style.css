@@ -5,6 +5,12 @@ body{
     overflow-y: scroll;
     top: 0;
     margin: 0;
+    width: 100%;
+  height: 300vh;
+  background-size: 300% 300%;
+  background-image: linear-gradient(-45deg, rgb(9, 0, 52) 0%, rgb(6, 0, 53) 25%, rgb(9, 0, 52) 51%, #79adff 100%);
+  -webkit-animation: AnimateBG 20s ease infinite;
+          animation: AnimateBG 20s ease infinite;
 }
 
 .container-headlline {
@@ -48,8 +54,6 @@ body{
     transform-style: preserve-3d;
     perspective: 2000px;
     margin: 0;
-    
-
 }
 .post {
     animation: fall 10s linear infinite; 
@@ -72,10 +76,11 @@ body{
 
   }
     
-    
+ /*   
 .post:hover {
     animation-play-state: paused;
 }
+    */
 
 .post img {
     width: 150px;
@@ -147,17 +152,28 @@ body{
     width: 100%;
     height: auto;
 }
-.details1[open] {
+.details1[open] .details1-content{
     display: block;
 }
-
-.details1[open] .details1-content {
+.details1-content {
+    display: none;
+    max-width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+}
+.details1[open] .post {
+    width: 350px !important; /* Einheitliche Breite */
+    height: auto !important; /* Dynamische Höhe */
+   /* z-index: 1000;*/
+    transform: none !important; /* Keine Transformation, wenn geöffnet */
+    animation: none !important;
+}
+.details1[open] .image-gallery {
     width: 300px !important; /* Feste Breite */
-    height: 300px !important; /* Falls gleiche Höhe gewünscht */
+    height: auto !important; /* Falls gleiche Höhe gewünscht */
     transform: none !important;
     position: relative !important; /* Falls absolute Positionierung stört */
     animation: none !important; 
-    background-color: blueviolet !important;
 }
 
 .image-gallery {
@@ -230,4 +246,28 @@ button {
 .btn-download:hover {
     text-decoration: underline dotted white 3px;
 }
+
+@-webkit-keyframes AnimateBG {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  @keyframes AnimateBG {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 

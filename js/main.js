@@ -15,11 +15,11 @@ document.addEventListener("DOMContentLoaded", () => {
     posts.forEach(post => {
         const randomLeft = Math.random() * (containerWidth - 150); // Abzug für Post-Breite
         const randomTop = Math.random() * (containerHeight - 200); // Abzug für Post-Höhe
-        const randomZ = Math.random() * 800 - 400; // Zufällige Z-Position
+        const randomZ = Math.random() * 1000 - 400; // Zufällige Z-Position
         const randomX = Math.random() * window.innerWidth; // Werte zwischen 0 und Fensterbreite
         const randomY = Math.random() * containerHeight - containerHeight / 2; // Zufällige Y-Position
         const startY = Math.random() * -500; // Zufällige Start-Y-Position (oberhalb des Bildschirms)
-        const scale = Math.max(0.6, Math.min(2.5, 1 - randomZ / 400)); // Skaliert nach Z
+        const scale = Math.max(0.8, Math.min(2.5, 1 - randomZ / 50)); // Skaliert nach Z
         const speedFactor = (400 + randomZ) / 400; // Geschwindigkeit abhängig von Tiefe
         const animationDuration = 10 + speedFactor * 30; // Dauer: 10s bis 40s
         const animationDelay = Math.random() * 3; // Zufällige Verzögerung (0 bis 5 Sekunden)
@@ -30,39 +30,32 @@ document.addEventListener("DOMContentLoaded", () => {
         post.style.animation = `fall ${animationDuration}s linear infinite`;
         post.style.animationDelay = `${animationDelay}s`;
         post.style.zIndex = Math.round(400 - randomZ);
-
-         // Event-Listener: Animation für ausgeklappte Inhalte stoppen
-         post.addEventListener("click", () => {
-            if (post.classList.contains("expanded")) {
-                // Animation zurücksetzen (wenn bereits ausgeklappt)
-                post.classList.remove("expanded");
-                post.style.animation = `fall ${animationDuration}s linear infinite`; // Animation wieder aktivieren
-            } else {
-                // Animation stoppen (beim Ausklappen)
-                post.classList.add("expanded");
-                post.style.animation = "none"; // Animation anhalten
-                post.style.transform = "none"; // Transformation zurücksetzen, wenn gewünscht
-            }
-        });
-        document.querySelectorAll(".details1").forEach(details1 => {
-            details1.addEventListener("toggle", function() {
-                const post = this.closest(".details1-content"); // Sucht das nächste .post-Element
-                if (post) {
-                    if (this.open) {
-                        post.style.animation = "none"; // Stoppe die Animation
-                        post.style.transform = "none"; // Setze Transform zurück
-                        post.style.width = "300px"; // Feste Breite
-                        post.style.height = "auto"; // Höhe automatisch
-                        post.style.position = "relative"; // Falls nötig, um Layout-Probleme zu fixen
-                    } else {
-                        post.style.animation = ""; // Setzt Standardwerte zurück
-                        post.style.transform = "";
-                        post.style.width = "";
-                        post.style.height = "";
-                    }
+        document.querySelectorAll(".details1").forEach(details => {
+            details.addEventListener("toggle", function () {
+                const post = this.closest(".post");
+    
+                if (this.open) {
+                    // **Animation stoppen und Größe fixieren**
+                    post.style.scale ="1.5";
+                    post.style.animation = "none";
+                    post.style.transform = "none";
+                    post.style.width = "350px !important"; // Einheitliche Breite
+                    post.style.height = "auto"; // Höhe je nach Inhalt
+                    post.style.position = "relative"; // Fixierte Position
+    
+                    // Falls nötig, den Eltern-Container fixieren
+                    post.parentElement.style.height = "auto";
+                } else {
+                    // **Animation und Größe zurücksetzen**
+                    post.style.animation = "";
+                    post.style.transform = "";
+                    post.style.width = "";
+                    post.style.height = "";
+                    post.style.position = "";
                 }
             });
         });
+
     });
     const masks = [
         "Maske_02.png",
