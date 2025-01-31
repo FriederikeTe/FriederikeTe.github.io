@@ -147,9 +147,17 @@ body{
     width: 100%;
     height: auto;
 }
+.details1[open] {
+    display: block;
+}
 
 .details1[open] .details1-content {
-    display: block;
+    width: 300px !important; /* Feste Breite */
+    height: 300px !important; /* Falls gleiche Höhe gewünscht */
+    transform: none !important;
+    position: relative !important; /* Falls absolute Positionierung stört */
+    animation: none !important; 
+    background-color: blueviolet !important;
 }
 
 .image-gallery {
@@ -195,17 +203,20 @@ button {
 }
 .Erklärung {
     opacity: 0;
-    position: absolute;
+    position: relative;
 }
 .upload-btn:hover ~ .Erklärung {
     opacity: 1;
+    right: 60%;
+
 } 
-/*
+
 .upload-btn {
     color: white;
     font-family: "cmunti";
     z-index: 1000;
-}*/
+    text-shadow: 2px 2px 5px  rgba(255, 255, 255, 0.84);
+}
 
 .btn-download {
     text-decoration: none;

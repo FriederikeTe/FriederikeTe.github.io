@@ -44,7 +44,25 @@ document.addEventListener("DOMContentLoaded", () => {
                 post.style.transform = "none"; // Transformation zurücksetzen, wenn gewünscht
             }
         });
-        
+        document.querySelectorAll(".details1").forEach(details1 => {
+            details1.addEventListener("toggle", function() {
+                const post = this.closest(".details1-content"); // Sucht das nächste .post-Element
+                if (post) {
+                    if (this.open) {
+                        post.style.animation = "none"; // Stoppe die Animation
+                        post.style.transform = "none"; // Setze Transform zurück
+                        post.style.width = "300px"; // Feste Breite
+                        post.style.height = "auto"; // Höhe automatisch
+                        post.style.position = "relative"; // Falls nötig, um Layout-Probleme zu fixen
+                    } else {
+                        post.style.animation = ""; // Setzt Standardwerte zurück
+                        post.style.transform = "";
+                        post.style.width = "";
+                        post.style.height = "";
+                    }
+                }
+            });
+        });
     });
     const masks = [
         "Maske_02.png",
