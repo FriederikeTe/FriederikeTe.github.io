@@ -67,7 +67,7 @@ body{
     object-fit: cover; 
   }
   
-  .masked-image[style*="mask-image"] {
+.masked-image[style*="mask-image"] {
     background-color: transparent;
 
   }
@@ -193,6 +193,13 @@ button {
 .details2 > p {
     color: hwb(240 0% 87%);
 }
+.Erklärung {
+    opacity: 0;
+    position: absolute;
+}
+.upload-btn:hover ~ .Erklärung {
+    opacity: 1;
+} 
 /*
 .upload-btn {
     color: white;
