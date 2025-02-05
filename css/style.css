@@ -7,7 +7,7 @@ body{
     margin: 0;
     width: 100%;
   height: 300vh;
-  background-size: 300% 300%;
+  background-size: 500% 500%;
   background-image: linear-gradient(-45deg, rgb(9, 0, 52) 0%, rgb(6, 0, 53) 25%, rgb(9, 0, 52) 51%, #79adff 100%);
   -webkit-animation: AnimateBG 20s ease infinite;
           animation: AnimateBG 20s ease infinite;
@@ -36,23 +36,25 @@ body{
 
 .note {
     opacity: 0;
-    position: absolute;
-    top: 10%;
-    left: 18%;
-    width: 250px;
+    position: fixed;
+    top: 7%;
+    left: 3%;
+    width: 240px;
     text-align: left;
     color: rgba(255, 255, 255, 0.74);
     z-index: -10;
     font-family: "cmunti";
+    text-transform: lowercase;
+    line-height: 1.1;
 }
 
 .grid {
     position: absolute;
     width: 100%;
-    height: 2000px;
+    height: 300vh;
     overflow: visible;
     transform-style: preserve-3d;
-    perspective: 2000px;
+    perspective: 300vh;
     margin: 0;
 }
 .post {
@@ -119,6 +121,7 @@ body{
     font-family: "cmunti";
     /*font-variant-caps: small-caps;*/
     text-align: center;
+    text-transform: lowercase;
     
 }
 
@@ -135,7 +138,6 @@ body{
     left: 50%;
     width: 300px;
     height: auto;
-    z-index: 1000;
     animation: none;
 }
 .details1-title {
@@ -148,39 +150,53 @@ body{
 .details1 summary::-webkit-details-marker {
     display: none; 
 }
+
 .details1 .details1-content img {
     width: 100%;
     height: auto;
 }
+  
 .details1[open] .details1-content{
     display: block;
+    z-index: 1000;
 }
 .details1-content {
     display: none;
     max-width: 100%;
     padding: 15px;
     border-radius: 8px;
+    width: 200vw;
 }
+/*
 .details1[open] .post {
-    width: 350px !important; /* Einheitliche Breite */
-    height: auto !important; /* Dynamische Höhe */
-   /* z-index: 1000;*/
-    transform: none !important; /* Keine Transformation, wenn geöffnet */
+    width: 350px !important; 
+    height: auto !important; 
+    z-index: 1000;
+    transform: none !important; 
     animation: none !important;
-}
+}*/
+
 .details1[open] .image-gallery {
-    width: 300px !important; /* Feste Breite */
-    height: auto !important; /* Falls gleiche Höhe gewünscht */
+    width: 300px !important; 
+    height: auto !important; 
     transform: none !important;
-    position: relative !important; /* Falls absolute Positionierung stört */
+    position: relative !important; 
     animation: none !important; 
+    text-align: center;
 }
 
 .image-gallery {
     display: flex;
     flex-direction: row;
-    gap: 1em;
+    gap: 0.2em;
+    text-align: center;
+    justify-content: flex-end !important;
 }
+
+.beschreibung {
+    text-align: center;
+}
+
 .details2 {
     position: fixed;
     top: 1%;
@@ -220,6 +236,7 @@ button {
 .Erklärung {
     opacity: 0;
     position: relative;
+    text-transform: lowercase;
 }
 .upload-btn:hover ~ .Erklärung {
     opacity: 1;
