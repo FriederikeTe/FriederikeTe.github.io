@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
                 if (this.open) {
                     // **Animation stoppen und Größe fixieren**
-                    post.style.scale ="1.5";
+                    post.style.scale ="1";
                     post.style.animation = "none";
                     post.style.transform = "none";
                     post.style.width = "350px !important"; // Einheitliche Breite
