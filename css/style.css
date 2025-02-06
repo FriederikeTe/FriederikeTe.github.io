@@ -193,7 +193,6 @@ body{
     flex-direction: row;
     gap: 0.2em;
     text-align: center;
-    justify-content: flex-end !important;
 }
 
 .beschreibung {
@@ -265,6 +264,7 @@ button {
 }
 .btn-download:hover {
     text-decoration: underline dotted white 3px;
+    -webkit-text-decoration: underline dotted white 3px;
 }
 
 @-webkit-keyframes AnimateBG {
