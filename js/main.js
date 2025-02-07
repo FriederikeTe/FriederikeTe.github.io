@@ -35,24 +35,36 @@ document.addEventListener("DOMContentLoaded", () => {
                 const post = this.closest(".post");
     
                 if (this.open) {
-                    // **Animation stoppen und Größe fixieren**
-                    post.style.scale ="1";
-                    post.style.animation = "none";
-                    post.style.transform = "none";
-                    post.style.width = "350px !important"; // Einheitliche Breite
-                    post.style.height = "auto"; // Höhe je nach Inhalt
-                    post.style.position = "relative"; // Fixierte Position
-    
-                    // Falls nötig, den Eltern-Container fixieren
-                    post.parentElement.style.height = "auto";
-                } else {
-                    // **Animation und Größe zurücksetzen**
-                    post.style.animation = "";
-                    post.style.transform = "";
-                    post.style.width = "";
-                    post.style.height = "";
-                    post.style.position = "";
-                }
+                   // **Viewport-Dimensionen holen**
+        const viewportWidth = window.innerWidth;
+        const viewportHeight = window.innerHeight;
+        const scrollY = window.scrollY; // Aktuelle Scroll-Position
+
+        // **Berechnung für Mitte**
+        const postWidth = 350; // Feste Breite für zentrierte Posts
+        const postHeight = post.offsetHeight; // Dynamische Höhe je nach Inhalt
+        const centerX = (viewportWidth - postWidth) / 2;
+        const centerY = scrollY + (viewportHeight - postHeight) / 2;
+
+        // **Fixierte Position setzen**
+        post.style.position = "absolute"; // Wichtig: Absolute Positionierung aktivieren
+        post.style.width = `${postWidth}px`;
+        post.style.height = "auto"; // Höhe je nach Inhalt
+        post.style.top = `${centerY}px`;
+        post.style.left = `${centerX}px`;
+
+        // **Animation & Skalierung deaktivieren**
+        post.style.scale = "1";
+        post.style.animation = "none";
+        post.style.transform = "none";
+    } else {
+        // **Animation und Größe zurücksetzen**
+        post.style.animation = "";
+        post.style.transform = "";
+        post.style.width = "";
+        post.style.height = "";
+        post.style.position = "";
+    }
             });
         });
 
