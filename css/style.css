@@ -7,10 +7,19 @@ body{
     margin: 0;
     width: 100%;
   height: 300vh;
-  background-size: 500% 500%;
-  background-image: linear-gradient(-45deg, rgb(9, 0, 52) 0%, rgb(6, 0, 53) 25%, rgb(9, 0, 52) 51%, #79adff 100%);
+  background-size: 400% 100%;
+  background-image: linear-gradient(-45deg, 
+    rgb(9, 0, 52) 0%, 
+    rgb(6, 0, 53) 25%, 
+    rgb(9, 0, 52) 50%, 
+    rgb(6, 0, 53) 75%, 
+    rgb(123, 97, 255) 100%);
   -webkit-animation: AnimateBG 20s ease infinite;
           animation: AnimateBG 20s ease infinite;
+    will-change: background-position;
+}
+html, body {
+    overflow-x: hidden;
 }
 
 .container-headlline {
@@ -53,7 +62,7 @@ body{
     position: absolute;
     width: 100%;
     height: 300vh;
-    overflow: visible;
+    /*overflow: visible;*/
     transform-style: preserve-3d;
     perspective: 300vh;
     margin: 0;
@@ -230,7 +239,6 @@ send,
 button {
     font-family: "cmunti";
     text-transform: lowercase;
-    color: white;
     line-height: 1;
 }
 button {
