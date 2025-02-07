@@ -190,7 +190,7 @@ html, body {
 }*/
 
 .details1[open] .image-gallery {
-    width: 300px !important; 
+    width: 45vw !important; 
     height: auto !important; 
     transform: none !important;
     position: relative !important; 
