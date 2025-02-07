@@ -190,11 +190,11 @@ html, body {
 }*/
 
 .details1[open] .image-gallery {
-    width: 45vw !important; 
-    height: auto !important; 
-    transform: none !important;
-    position: relative !important; 
-    animation: none !important; 
+    /*width: 45vw !important; */
+    height: auto; 
+    transform: none;
+    position: relative; 
+    animation: none; 
     text-align: center;
 }
 
