@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const randomX = Math.random() * window.innerWidth; // Werte zwischen 0 und Fensterbreite
         const randomY = Math.random() * containerHeight - containerHeight / 2; // Zufällige Y-Position
         const startY = Math.random() * -500; // Zufällige Start-Y-Position (oberhalb des Bildschirms)
-        const scale = Math.max(0.8, Math.min(5, 2 - randomZ / 50)); // Skaliert nach Z
+        const scale = Math.max(0.8, Math.min(4, 2 - randomZ / 50)); // Skaliert nach Z
         const speedFactor = (400 + randomZ) / 400; // Geschwindigkeit abhängig von Tiefe
         const animationDuration = 10 + speedFactor * 30; // Dauer: 10s bis 40s
         const animationDelay = Math.random() * 3; // Zufällige Verzögerung (0 bis 5 Sekunden)
@@ -28,8 +28,20 @@ document.addEventListener("DOMContentLoaded", () => {
         post.style.transform = `translateZ(${randomZ}px) translateX(${randomX}px) translateY(${startY}px)`;
         post.style.scale = `${scale}`;
         post.style.animation = `fall ${animationDuration}s linear infinite`;
+        post.style.animation = `rotate ${animationDuration}s linear infinte`;
         post.style.animationDelay = `${animationDelay}s`;
         post.style.zIndex = Math.round(400 - randomZ);
+
+        //jquery test
+        $(document).ready(function(){
+        $(".details1 summary").css({
+            'animation-duration': '20s'
+        });
+            
+        
+        });
+    
+
         document.querySelectorAll(".details1").forEach(details => {
             details.addEventListener("toggle", function () {
                 const post = this.closest(".post");
@@ -67,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
             });
         });
-
+        
     });
     const masks = [
         "Maske_02.png",

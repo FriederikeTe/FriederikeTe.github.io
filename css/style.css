@@ -1,13 +1,13 @@
 body{
-    background-color: hwb(240 0% 87%);
+    background-color: var(--background);
     position: relative;
     /*perspective: 1000px;*/
-    /*overflow-y: scroll;*/
+    overflow-y: hidden;
     top: 0;
     margin: 0;
     width: 100%;
-  height: 500vh;
-  background-size: 400% 100%;
+  height: 350vh;
+  /*background-size: 400% 100%;
   background-image: linear-gradient(-45deg, 
     rgb(9, 0, 52) 0%, 
     rgb(6, 0, 53) 25%, 
@@ -17,9 +17,14 @@ body{
   -webkit-animation: AnimateBG 20s ease infinite;
           animation: AnimateBG 20s ease infinite;
     will-change: background-position;
+    */
 }
 html, body {
     overflow-x: hidden;
+}
+
+:root {
+    --background: hwb(280 36% 0%);
 }
 
 .container-headlline {
@@ -56,25 +61,28 @@ html, body {
     font-family: "cmunti";
     text-transform: lowercase;
     line-height: 1.1;
+    word-spacing: -25%;
 }
 
 .grid {
     position: absolute;
     width: 100%;
-    height: 300vh;
+    height: 350vh;
     overflow: visible;
     transform-style: preserve-3d;
-    perspective: 300vh;
+    perspective: 350vh;
     margin: 0;
 }
 
 .post {
-    animation: fall 10s linear infinite; 
+    animation: fall 10s linear infinite;
     position: absolute; 
     width: 150px; 
     height: auto;
     transform: none;
     transform-style: preserve-3d;
+    image-rendering: crisp-edges;
+
 }
 
 .masked-image {
@@ -96,8 +104,8 @@ html, body {
     */
 
 .post img {
-    width: 150px;
-    height: 150px;
+    width: 15vw;
+    height: 25vh;
     object-fit: cover;
     max-width: none;
     max-height: none;
@@ -105,23 +113,6 @@ html, body {
 }
 .post img:hover {
     filter: none;
-}
-@keyframes fall {
-    0% {
-        transform: translateY(-200px);
-    }
-    100% {
-        transform: translateY(100vh); 
-    }
-}
-
-@keyframes down {
-    0% {
-        transform: translateY(-10%);
-    }
-    100% {
-        transform: translateY(50%);
-    }
 }
 
 .post p {
@@ -141,8 +132,9 @@ html, body {
 }
 .details1 summary {
     list-style: none;
-    filter: sepia(1) hue-rotate(165deg);
-
+}
+.details1 summary img {
+    animation: rotate 30s linear infinite;
 }
 
 .details1 .details1-content {
@@ -243,16 +235,18 @@ button {
     line-height: 1;
 }
 button {
-    color: hwb(240 0% 87%);
+    color: var(--background);
 }
 .details2 > p {
-    color: hwb(240 0% 87%);
+    color: var(--background);
 }
 .Erklärung {
     opacity: 0;
     position: relative;
     text-transform: lowercase;
     line-height: 1.1;
+    word-spacing: -30%;
+    width: auto;
 }
 .upload-btn:hover ~ .Erklärung {
     opacity: 1;
@@ -279,6 +273,30 @@ button {
 .btn-download:hover {
     text-decoration: underline dotted white 3px;
     -webkit-text-decoration: underline dotted white 3px;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-200px);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: translateZ(0px) rotateX(0deg) rotateZ(0deg) rotateY(0deg);
+    }
+    20% {
+        transform: translateZ(20px) rotateX(150deg) rotateZ(0deg) rotateY(-90deg);
+      }
+    50% {
+        transform: translateZ(40px) rotateX(300deg) rotateZ(0deg) rotateY(-180deg);
+      }
+    100% {
+        transform: translateZ(80px) rotateX(360deg) rotateZ(0deg) rotateY(-360deg);
+      }
 }
 
 @-webkit-keyframes AnimateBG {
