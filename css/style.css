@@ -7,13 +7,13 @@ body{
     margin: 0;
     width: 100%;
   height: 350vh;
-  /*background-size: 400% 100%;
-  background-image: linear-gradient(-45deg, 
-    rgb(9, 0, 52) 0%, 
-    rgb(6, 0, 53) 25%, 
-    rgb(9, 0, 52) 50%, 
-    rgb(6, 0, 53) 75%, 
-    rgb(123, 97, 255) 100%);
+ /* background-size: 400% 100%;
+  background-image: linear-gradient(-60deg, 
+    var(--background) 0%, 
+    var(--background) 25%, 
+    var(--background) 50%, 
+    var(--background) 75%, 
+    rgb(245, 194, 255) 100%);
   -webkit-animation: AnimateBG 20s ease infinite;
           animation: AnimateBG 20s ease infinite;
     will-change: background-position;
@@ -24,7 +24,7 @@ html, body {
 }
 
 :root {
-    --background: hwb(280 36% 0%);
+    --background: hwb(282 0% 0%);
 }
 
 .container-headlline {
@@ -35,7 +35,7 @@ html, body {
 .Ueberschrift{
     position: fixed;
     color: rgb(255, 255, 255);
-    text-shadow: 2px 2px 5px  rgba(255, 255, 255, 0.84);
+    /*text-shadow: 2px 2px 5px  rgba(255, 255, 255, 0.84);*/
     z-index: 1000;
     font-size: 2.5rem;
     font-family: "cmunti";
@@ -134,7 +134,7 @@ html, body {
     list-style: none;
 }
 .details1 summary img {
-    animation: rotate 30s linear infinite;
+    animation: rotate 40s linear infinite;
 }
 
 .details1 .details1-content {
@@ -283,7 +283,7 @@ button {
         transform: translateY(100vh);
     }
 }
-
+/*
 @keyframes rotate {
     0% {
         transform: translateZ(0px) rotateX(0deg) rotateZ(0deg) rotateY(0deg);
@@ -297,6 +297,24 @@ button {
     100% {
         transform: translateZ(80px) rotateX(360deg) rotateZ(0deg) rotateY(-360deg);
       }
+}*/
+
+@keyframes rotate1 {
+    0% { transform: translateZ(0px) rotateX(0deg) rotateY(0deg); }
+    50% { transform: translateZ(30px) rotateX(200deg) rotateY(-160deg); }
+    100% { transform: translateZ(60px) rotateX(360deg) rotateY(-360deg); }
+}
+
+@keyframes rotate2 {
+    0% { transform: translateZ(0px) rotateX(0deg) rotateY(0deg); }
+    50% { transform: translateZ(40px) rotateX(250deg) rotateY(-140deg); }
+    100% { transform: translateZ(70px) rotateX(360deg) rotateY(-360deg); }
+}
+
+@keyframes rotate3 {
+    0% { transform: translateZ(0px) rotateX(0deg) rotateY(0deg); }
+    50% { transform: translateZ(35px) rotateX(140deg) rotateY(-180deg); }
+    100% { transform: translateZ(120px) rotateX(360deg) rotateY(-360deg); }
 }
 
 @-webkit-keyframes AnimateBG {

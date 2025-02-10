@@ -34,11 +34,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
         //jquery test
         $(document).ready(function(){
-        $(".details1 summary").css({
-            'animation-duration': '20s'
-        });
-            
+            $(".details1 summary img").each(function(){
+                let animations = ["rotate1", "rotate2", "rotate3"]; // Liste der Keyframes
+                let randomAnimation = animations[Math.floor(Math.random() * animations.length)]; // Zufällige Auswahl
         
+                let duration = 15 + Math.random() * 10; // Zufällige Dauer zwischen 15s und 25s
+                let delay = Math.random() * 5; // Zufällige Verzögerung bis 5s
+        
+                $(this).css({
+                    'animation-name': randomAnimation,
+                    'animation-duration': duration + 's',
+                    'animation-delay': delay + 's',
+                    'animation-timing-function': 'linear',
+                    'animation-iteration-count': 'infinite'
+                });
+            });
         });
     
 
