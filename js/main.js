@@ -32,25 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
         post.style.animationDelay = `${animationDelay}s`;
         post.style.zIndex = Math.round(400 - randomZ);
 
-        //jquery test
- /*$(document).ready(function(){
-    $(".details1 summary img").each(function(){
-        let animations = ["rotate1", "rotate2", "rotate3"]; // Liste der Keyframes
-        let randomAnimation = animations[Math.floor(Math.random() * animations.length)]; // Zufällige Auswahl
-
-        let duration = 15 + Math.random() * 10; // Zufällige Dauer zwischen 15s und 25s
-        let delay = Math.random() * 5; // Zufällige Verzögerung bis 5s
-
-        $(this).css({
-            'animation-name': randomAnimation,
-            'animation-duration': duration + 's',
-            'animation-delay': delay + 's',
-            'animation-timing-function': 'linear',
-            'animation-iteration-count': 'infinite'
-        });
-    });
-}); */
-
 $(document).ready(function(){
     $(".details1 summary img").each(function(index){
         let animationName = "rotateRandom" + index; // Einzigartiger Name für jede Animation
@@ -58,8 +39,8 @@ $(document).ready(function(){
         let keyframes = `
             @keyframes ${animationName} {
                 0% { transform: translateZ(0px) rotateX(0deg) rotateY(0deg); }
-                50% { transform: translateZ(${randomRange(20, 50)}px) rotateX(${randomRange(150, 300)}deg) rotateY(${randomRange(-200, -100)}deg); }
-                100% { transform: translateZ(${randomRange(50, 80)}px) rotateX(360deg) rotateY(-360deg); }
+                50% { transform: translateZ(${randomRange(20, 50)}px) rotateX(${randomRange(150, 300)}deg) rotateY(${randomRange(100, 200)}deg); }
+                100% { transform: translateZ(${randomRange(40, 120)}px) rotateX(360deg) rotateY(-360deg); }
             }
         `;
 
@@ -68,6 +49,7 @@ $(document).ready(function(){
 
         let duration = randomRange(15, 25); // Zufällige Dauer zwischen 15s und 25s
         let delay = randomRange(0, 5); // Zufällige Verzögerung bis 5s
+        let speedFactor = (400 + randomZ) / 400;
 
         $(this).css({
             'animation-name': animationName,
@@ -112,6 +94,7 @@ $(document).ready(function(){
         post.style.scale = "1";
         post.style.animation = "none";
         post.style.transform = "none";
+        post.style.zIndex = "none";
     } else {
         // **Animation und Größe zurücksetzen**
         post.style.animation = "";

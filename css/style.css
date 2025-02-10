@@ -105,7 +105,7 @@ html, body {
 
 .post img {
     width: 15vw;
-    height: 25vh;
+    height: 30vh;
     object-fit: cover;
     max-width: none;
     max-height: none;
@@ -116,15 +116,13 @@ html, body {
 }
 
 .post p {
-    font-size: 0.7rem;
-    margin-top: 1px;
+    font-size: 0.9rem;
+    margin: 1em;
     color: rgb(255, 255, 255);
-   /* text-shadow: 2px 2px 5px  rgba(255, 255, 255, 0.811);*/
     font-family: "cmunti";
-    /*font-variant-caps: small-caps;*/
     text-align: center;
     text-transform: lowercase;
-    
+    line-height: 1.1em;
 }
 
 .post a {
@@ -135,8 +133,7 @@ html, body {
 }
 .details1 summary img {
     animation: rotate 40s linear infinite;
-    /*transform: translateZ(-10px) rotateX(60deg) rotateZ(29deg) rotateY(0deg);
-    transform-style: preserve-3d;*/
+    transform-style: preserve-3d;
 }
 
 .details1 .details1-content {
@@ -148,7 +145,7 @@ html, body {
     animation: none;
 }
 .details1-title {
-    font-size: 1rem;
+    font-size: 2rem;
     color: white;
     font-family: "cmunti";
     text-align: center;
@@ -184,7 +181,6 @@ html, body {
 }*/
 
 .details1[open] .image-gallery {
-    /*width: 45vw !important; */
     height: auto; 
     transform: none;
     position: relative; 
