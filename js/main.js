@@ -33,23 +33,56 @@ document.addEventListener("DOMContentLoaded", () => {
         post.style.zIndex = Math.round(400 - randomZ);
 
         //jquery test
-        $(document).ready(function(){
-            $(".details1 summary img").each(function(){
-                let animations = ["rotate1", "rotate2", "rotate3"]; // Liste der Keyframes
-                let randomAnimation = animations[Math.floor(Math.random() * animations.length)]; // Zufällige Auswahl
-        
-                let duration = 15 + Math.random() * 10; // Zufällige Dauer zwischen 15s und 25s
-                let delay = Math.random() * 5; // Zufällige Verzögerung bis 5s
-        
-                $(this).css({
-                    'animation-name': randomAnimation,
-                    'animation-duration': duration + 's',
-                    'animation-delay': delay + 's',
-                    'animation-timing-function': 'linear',
-                    'animation-iteration-count': 'infinite'
-                });
-            });
+ /*$(document).ready(function(){
+    $(".details1 summary img").each(function(){
+        let animations = ["rotate1", "rotate2", "rotate3"]; // Liste der Keyframes
+        let randomAnimation = animations[Math.floor(Math.random() * animations.length)]; // Zufällige Auswahl
+
+        let duration = 15 + Math.random() * 10; // Zufällige Dauer zwischen 15s und 25s
+        let delay = Math.random() * 5; // Zufällige Verzögerung bis 5s
+
+        $(this).css({
+            'animation-name': randomAnimation,
+            'animation-duration': duration + 's',
+            'animation-delay': delay + 's',
+            'animation-timing-function': 'linear',
+            'animation-iteration-count': 'infinite'
         });
+    });
+}); */
+
+$(document).ready(function(){
+    $(".details1 summary img").each(function(index){
+        let animationName = "rotateRandom" + index; // Einzigartiger Name für jede Animation
+
+        let keyframes = `
+            @keyframes ${animationName} {
+                0% { transform: translateZ(0px) rotateX(0deg) rotateY(0deg); }
+                50% { transform: translateZ(${randomRange(20, 50)}px) rotateX(${randomRange(150, 300)}deg) rotateY(${randomRange(-200, -100)}deg); }
+                100% { transform: translateZ(${randomRange(50, 80)}px) rotateX(360deg) rotateY(-360deg); }
+            }
+        `;
+
+        // Füge das generierte CSS zur Seite hinzu
+        $("head").append(`<style>${keyframes}</style>`);
+
+        let duration = randomRange(15, 25); // Zufällige Dauer zwischen 15s und 25s
+        let delay = randomRange(0, 5); // Zufällige Verzögerung bis 5s
+
+        $(this).css({
+            'animation-name': animationName,
+            'animation-duration': duration + 's',
+            'animation-delay': delay + 's',
+            'animation-timing-function': 'linear',
+            'animation-iteration-count': 'infinite'
+        });
+    });
+
+    // Funktion für eine Zufallszahl im Bereich min - max
+    function randomRange(min, max) {
+        return Math.random() * (max - min) + min;
+    }
+});
     
 
         document.querySelectorAll(".details1").forEach(details => {

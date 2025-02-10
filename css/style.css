@@ -135,6 +135,8 @@ html, body {
 }
 .details1 summary img {
     animation: rotate 40s linear infinite;
+    /*transform: translateZ(-10px) rotateX(60deg) rotateZ(29deg) rotateY(0deg);
+    transform-style: preserve-3d;*/
 }
 
 .details1 .details1-content {
@@ -258,7 +260,7 @@ button {
     color: white;
     font-family: "cmunti";
     z-index: 1000;
-    text-shadow: 2px 2px 5px  rgba(255, 255, 255, 0.84);
+    /*text-shadow: 2px 2px 5px  rgba(255, 255, 255, 0.84);*/
 }
 
 .btn-download {
@@ -300,21 +302,21 @@ button {
 }*/
 
 @keyframes rotate1 {
-    0% { transform: translateZ(0px) rotateX(0deg) rotateY(0deg); }
-    50% { transform: translateZ(30px) rotateX(200deg) rotateY(-160deg); }
-    100% { transform: translateZ(60px) rotateX(360deg) rotateY(-360deg); }
+    0% { transform: translateZ(0px) rotateX(0deg) rotateY(0deg) scaleX(0); }
+    50% { transform: translateZ(30px) rotateX(200deg) rotateY(-160deg) scaleX(1); }
+    100% { transform: translateZ(60px) rotateX(360deg) rotateY(-360deg) scaleX(5); }
 }
 
 @keyframes rotate2 {
-    0% { transform: translateZ(0px) rotateX(0deg) rotateY(0deg); }
-    50% { transform: translateZ(40px) rotateX(250deg) rotateY(-140deg); }
-    100% { transform: translateZ(70px) rotateX(360deg) rotateY(-360deg); }
+    0% { transform: translateZ(0px) rotateX(0deg) rotateY(0deg) scaleX(0); }
+    50% { transform: translateZ(40px) rotateX(250deg) rotateY(-140deg) scaleX(2); }
+    100% { transform: translateZ(70px) rotateX(360deg) rotateY(-360deg) scaleX(7); }
 }
 
 @keyframes rotate3 {
-    0% { transform: translateZ(0px) rotateX(0deg) rotateY(0deg); }
-    50% { transform: translateZ(35px) rotateX(140deg) rotateY(-180deg); }
-    100% { transform: translateZ(120px) rotateX(360deg) rotateY(-360deg); }
+    0% { transform: translateZ(0px) rotateX(0deg) rotateY(0deg) scaleX(0); }
+    50% { transform: translateZ(35px) rotateX(140deg) rotateY(-180deg) scaleX(3); }
+    100% { transform: translateZ(120px) rotateX(360deg) rotateY(-360deg) scaleX(4); }
 }
 
 @-webkit-keyframes AnimateBG {
