@@ -8,4 +8,7 @@
     src: url(/fonts/cmunti-webfont.woff);
 }
 
-
+@font-face {
+    font-family: cmu;
+    src: url(/fonts/cmunbi-webfont.woff);
+}

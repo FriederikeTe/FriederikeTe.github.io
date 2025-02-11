@@ -24,7 +24,8 @@ html, body {
 }
 
 :root {
-    --background: hwb(282 0% 0%);
+    --background: hwb(0 100% 0%);
+    --schrift: black;
 }
 
 .container-headlline {
@@ -34,14 +35,15 @@ html, body {
 }
 .Ueberschrift{
     position: fixed;
-    color: rgb(255, 255, 255);
+    color: var(--schrift);
     /*text-shadow: 2px 2px 5px  rgba(255, 255, 255, 0.84);*/
     z-index: 1000;
     font-size: 2.5rem;
-    font-family: "cmunti";
+    font-family: "cmu";
     background-color: transparent; 
     margin-top: -0px;
     left: 1%;
+   /* text-transform: uppercase;*/
 }
 .Ueberschrift:hover ~ .note {
     opacity: 1;
@@ -56,7 +58,7 @@ html, body {
     left: 3%;
     width: 240px;
     text-align: left;
-    color: rgba(255, 255, 255, 0.74);
+    color: var(--schrift);
     z-index: -10;
     font-family: "cmunti";
     text-transform: lowercase;
@@ -118,7 +120,7 @@ html, body {
 .post p {
     font-size: 0.9rem;
     margin: 1em;
-    color: rgb(255, 255, 255);
+    color: var(--schrift);
     font-family: "cmunti";
     text-align: center;
     text-transform: lowercase;
@@ -146,7 +148,7 @@ html, body {
 }
 .details1-title {
     font-size: 2rem;
-    color: white;
+    color: var(--schrift);
     font-family: "cmunti";
     text-align: center;
 
@@ -209,7 +211,7 @@ html, body {
     list-style: none;
     height: 60px;
     width: 130px;
-    color: white;
+    color: var(--schrift);
 }
 .details2 summary {
     list-style: none;
@@ -222,7 +224,7 @@ html, body {
     transition: transform 0.4s ease;
 }
 form {
-    color: white;
+    color: var(--schrift);
 }
 input,
 textarea,
@@ -253,7 +255,7 @@ button {
 } 
 
 .upload-btn {
-    color: white;
+    color: var(--schrift);
     font-family: "cmunti";
     z-index: 1000;
     /*text-shadow: 2px 2px 5px  rgba(255, 255, 255, 0.84);*/
@@ -261,7 +263,7 @@ button {
 
 .btn-download {
     text-decoration: none;
-    color: white;
+    color: var(--schrift);
     position: absolute;
     left: 50%;
     transform: translateX(-50%) ;
@@ -269,8 +271,8 @@ button {
     font-size: 0.7rem;
 }
 .btn-download:hover {
-    text-decoration: underline dotted white 3px;
-    -webkit-text-decoration: underline dotted white 3px;
+    text-decoration: underline dotted var(--schrift) 3px;
+    -webkit-text-decoration: underline dotted var(--schrift) 3px;
 }
 
 @keyframes fall {
