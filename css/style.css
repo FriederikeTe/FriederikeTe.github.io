@@ -38,12 +38,12 @@ html, body {
     color: var(--schrift);
     /*text-shadow: 2px 2px 5px  rgba(255, 255, 255, 0.84);*/
     z-index: 1000;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-family: "cmu";
     background-color: transparent; 
     margin-top: -0px;
     left: 1%;
-   /* text-transform: uppercase;*/
+    text-transform: uppercase;
 }
 .Ueberschrift:hover ~ .note {
     opacity: 1;
@@ -123,7 +123,6 @@ html, body {
     color: var(--schrift);
     font-family: "cmunti";
     text-align: center;
-    text-transform: lowercase;
     line-height: 1.1em;
 }
 
@@ -132,6 +131,8 @@ html, body {
 }
 .details1 summary {
     list-style: none;
+    text-transform: uppercase;
+    font-size: 0.6rem;
 }
 .details1 summary img {
     animation: rotate 40s linear infinite;
@@ -151,7 +152,6 @@ html, body {
     color: var(--schrift);
     font-family: "cmunti";
     text-align: center;
-
 }
 .details1 summary::-webkit-details-marker {
     display: none; 
