@@ -42,7 +42,7 @@ html, body {
     font-family: "cmu";
     background-color: transparent; 
     margin-top: -0px;
-    left: 1%;
+    left: 0.5%;
     text-transform: uppercase;
 }
 .Ueberschrift:hover ~ .note {
@@ -203,8 +203,8 @@ html, body {
 
 .details2 {
     position: fixed;
-    top: 1%;
-    left: 95%;
+    top: 0.1%;
+    left: 94%;
     z-index: 1000;
     transition: transform 0.3s ease;
     font-family: "cmunti";
@@ -256,9 +256,9 @@ button {
 
 .upload-btn {
     color: var(--schrift);
-    font-family: "cmunti";
+    font-family: "cmu";
     z-index: 1000;
-    /*text-shadow: 2px 2px 5px  rgba(255, 255, 255, 0.84);*/
+    text-transform: uppercase;
 }
 
 .btn-download {
