@@ -7,63 +7,48 @@ body{
     margin: 0;
     width: 100%;
   height: 350vh;
- /* background-size: 400% 100%;
-  background-image: linear-gradient(-60deg, 
-    var(--background) 0%, 
-    var(--background) 25%, 
-    var(--background) 50%, 
-    var(--background) 75%, 
-    rgb(245, 194, 255) 100%);
-  -webkit-animation: AnimateBG 20s ease infinite;
-          animation: AnimateBG 20s ease infinite;
-    will-change: background-position;
-    */
 }
 html, body {
     overflow-x: hidden;
+    scrollbar-width: none;
 }
 
 :root {
     --background: hwb(0 100% 0%);
     --schrift: black;
 }
-
+/*
 .container-headlline {
     top: 0;
     z-index: 1000;
     left: 2px;
-}
+}*/
 .Ueberschrift{
-    position: fixed;
-    color: var(--schrift);
-    /*text-shadow: 2px 2px 5px  rgba(255, 255, 255, 0.84);*/
-    z-index: 1000;
-    font-size: 2rem;
+    font-size: 1.3rem;
     font-family: "cmu";
     background-color: transparent; 
-    margin-top: -0px;
-    left: 0.5%;
     text-transform: uppercase;
+    letter-spacing: -1px;
 }
+/*
 .Ueberschrift:hover ~ .note {
     opacity: 1;
     z-index: 1000;  
-
 }
-
+*/
 .note {
-    opacity: 0;
-    position: fixed;
-    top: 7%;
-    left: 3%;
-    width: 240px;
+    /*opacity: 0;*/
+    position: relative;
+    top: 1%;
+    left: 1%;
+    width: 40vw;
     text-align: left;
     color: var(--schrift);
     z-index: -10;
-    font-family: "cmunti";
-    text-transform: lowercase;
+    font-family: "cmuroman";
     line-height: 1.1;
     word-spacing: -25%;
+    font-size: 1rem;
 }
 
 .grid {
@@ -73,9 +58,7 @@ html, body {
     overflow: visible;
     transform-style: preserve-3d;
     perspective: 350vh;
-    margin: 0;
 }
-
 .post {
     animation: fall 10s linear infinite;
     position: absolute; 
@@ -84,7 +67,6 @@ html, body {
     transform: none;
     transform-style: preserve-3d;
     image-rendering: crisp-edges;
-
 }
 
 .masked-image {
@@ -96,7 +78,6 @@ html, body {
   
 .masked-image[style*="mask-image"] {
     background-color: transparent;
-
   }
     
  /*   
@@ -106,8 +87,8 @@ html, body {
     */
 
 .post img {
-    width: 15vw;
-    height: 30vh;
+    width: 20vw;
+    height: 35vh;
     object-fit: cover;
     max-width: none;
     max-height: none;
@@ -121,8 +102,7 @@ html, body {
     font-size: 0.9rem;
     margin: 1em;
     color: var(--schrift);
-    font-family: "cmunti";
-    text-align: center;
+    font-family: "cmubold";
     line-height: 1.1em;
 }
 
@@ -133,25 +113,12 @@ html, body {
     list-style: none;
     text-transform: uppercase;
     font-size: 0.6rem;
+    text-align: center;
+    font-family: "cmu";
 }
 .details1 summary img {
     animation: rotate 40s linear infinite;
     transform-style: preserve-3d;
-}
-
-.details1 .details1-content {
-    position: fixed;
-    top: 100px;
-    left: 50%;
-    width: 300px;
-    height: auto;
-    animation: none;
-}
-.details1-title {
-    font-size: 2rem;
-    color: var(--schrift);
-    font-family: "cmunti";
-    text-align: center;
 }
 .details1 summary::-webkit-details-marker {
     display: none; 
@@ -159,68 +126,65 @@ html, body {
 
 .details1 .details1-content img {
     width: 100%;
-    height: auto;
-}
-  
-.details1[open] .details1-content{
-    display: block;
-    z-index: 1000;
+    height: 60vh;
+    max-height: 60vh;
+    width: auto;
 }
 .details1-content {
-    display: none;
+    display: flex;
+    flex-direction: column;
     max-width: 100%;
-    padding: 15px;
-    border-radius: 8px;
-    width: 200vw;
-}
-/*
-.details1[open] .post {
-    width: 350px !important; 
-    height: auto !important; 
-    z-index: 1000;
-    transform: none !important; 
-    animation: none !important;
-}*/
-
-.details1[open] .image-gallery {
-    height: auto; 
-    transform: none;
-    position: relative; 
-    animation: none; 
+    width: 100vw;
     text-align: center;
+}
+.title-details1 {
+    font-family: "cmu";
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    word-spacing: -3px;
+    letter-spacing: -1px;
 }
 
 .image-gallery {
     display: flex;
     flex-direction: row;
-    gap: 0.2em;
-    text-align: center;
+    /*flex-wrap: wrap;*/
+    gap: 0.3em;
+    text-align: left;
+    max-width: 80vw;
+    height: auto;
+    object-fit: contain;
 }
 
 .beschreibung {
-    text-align: center;
+    text-align: left;
+    width: 30vw;
+    max-width: 100vw;
+    line-height: 1.1;
 }
 
 .details2 {
     position: fixed;
-    top: 0.1%;
-    left: 94%;
-    z-index: 1000;
+    right: 0.4vw;
+    z-index: 9999;
     transition: transform 0.3s ease;
-    font-family: "cmunti";
+    font-family: "cmubold";
     list-style: none;
-    height: 60px;
-    width: 130px;
+    height: 2vh;
+    width: 13vw;
     color: var(--schrift);
+    text-align: left;
 }
 .details2 summary {
     list-style: none;
+    text-align: right;
+    margin-right: 1vw;
 }
 .details2 summary::-webkit-details-marker {
     display: none; 
 }
 .details2[open] form {   
-    transform: translateX(-250px);
+    transform: translateX(-8vw);
     transition: transform 0.4s ease;
 }
 form {
@@ -230,28 +194,28 @@ input,
 textarea,
 send,
 button {
-    font-family: "cmunti";
-    text-transform: lowercase;
+    font-family: "cmuroman";
     line-height: 1;
 }
 button {
-    color: var(--background);
+    color: var(--schrift);
 }
 .details2 > p {
-    color: var(--background);
+    color: var(--schrift);
 }
 .Erklärung {
     opacity: 0;
     position: relative;
-    text-transform: lowercase;
     line-height: 1.1;
     word-spacing: -30%;
     width: auto;
+    font-family: "cmuroman";
+    font-size: 1rem;
+    text-align: left;
 }
 .upload-btn:hover ~ .Erklärung {
     opacity: 1;
-    right: 60%;
-
+    right: 0.5vw;
 } 
 
 .upload-btn {
@@ -259,15 +223,19 @@ button {
     font-family: "cmu";
     z-index: 1000;
     text-transform: uppercase;
+    letter-spacing: -1px;
 }
 
 .btn-download {
     text-decoration: none;
     color: var(--schrift);
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%) ;
-    font-family: "cmunti";
+    position: relative;
+    font-family: "cmubold";
+    font-size: 0.8rem;
+    margin-left: 0.9vw;
+}
+.download-links {
+    font-family: "cmu";
     font-size: 0.7rem;
 }
 .btn-download:hover {
@@ -300,44 +268,19 @@ button {
 }*/
 
 @keyframes rotate1 {
-    0% { transform: translateZ(0px) rotateX(0deg) rotateY(0deg) scaleX(0); }
-    50% { transform: translateZ(30px) rotateX(200deg) rotateY(-160deg) scaleX(1); }
-    100% { transform: translateZ(60px) rotateX(360deg) rotateY(-360deg) scaleX(5); }
+    0% { transform: translateZ(0px) rotateX(0deg) rotateY(0deg); }
+    50% { transform: translateZ(30px) rotateX(200deg) rotateY(-160deg); }
+    100% { transform: translateZ(60px) rotateX(360deg) rotateY(-360deg); }
 }
 
 @keyframes rotate2 {
-    0% { transform: translateZ(0px) rotateX(0deg) rotateY(0deg) scaleX(0); }
-    50% { transform: translateZ(40px) rotateX(250deg) rotateY(-140deg) scaleX(2); }
-    100% { transform: translateZ(70px) rotateX(360deg) rotateY(-360deg) scaleX(7); }
+    0% { transform: translateZ(0px) rotateX(0deg) rotateY(0deg); }
+    50% { transform: translateZ(40px) rotateX(250deg) rotateY(-140deg); }
+    100% { transform: translateZ(70px) rotateX(360deg) rotateY(-360deg); }
 }
 
 @keyframes rotate3 {
-    0% { transform: translateZ(0px) rotateX(0deg) rotateY(0deg) scaleY(0); }
-    50% { transform: translateZ(35px) rotateX(140deg) rotateY(-180deg) scaleY(3); }
-    100% { transform: translateZ(120px) rotateX(360deg) rotateY(-360deg) scaleX(4); }
+    0% { transform: translateZ(0px) rotateX(0deg) rotateY(0deg); }
+    50% { transform: translateZ(35px) rotateX(140deg) rotateY(-180deg); }
+    100% { transform: translateZ(120px) rotateX(360deg) rotateY(-360deg); }
 }
-
-@-webkit-keyframes AnimateBG {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-  
-  @keyframes AnimateBG {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-

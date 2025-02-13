@@ -12,3 +12,11 @@
     font-family: cmu;
     src: url(/fonts/cmunbi-webfont.woff);
 }
+@font-face {
+    font-family: cmubold;
+    src: url(/fonts/cmunbx-webfont.woff);
+}
+@font-face {
+    font-family: cmuroman;
+    src: url(/fonts/cmunrm-webfont.woff)
+}

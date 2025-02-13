@@ -12,11 +12,37 @@
 
 <body>
            
-<div class="container-headline">
-        <p class="Ueberschrift">meeresschnee</p>
-        <p class="note">wie ein stetiger Schneefall rieseln winzige organische Partikel von der Wasseroberfläche auf den Meeresgrund.
-            Auf seinem Weg in die Tiefe wird der Meeresschnee bereits von verschiedenen Organismen und Lebewesen konsumiert. Ozean voller verworfener oder vergessener Ideen, Konzepte und Skizzen.</p>
+<div>
+    <details class="details2">
+        <summary>
+            <a class="upload-btn">upload</a>
+            <p class="Erklärung">Hochladen von eigenen vergessenen oder unvollendeten Projekten und Skizzen. Mögliche Dateiformate sind: jpg, png, pdf, indd, ai.</p>
+        </summary>
+        <form name="contact" method="POST" data-netlify="true" enctype="multipart/form-data">
+            <input type="hidden" name="form-name" value="contact">
+            <p>
+                <label>Name: <input type="text" name="name" required></label>
+            </p>
+            <p>
+                <label>Titel: <input type="text" name="titel" required></label>
+            </p>
+          
+            <p>
+                <label>Beschreibung: <textarea name="description" rows="6" required></textarea></label>
+            </p>
+            <p>
+                <label for="file">Dateien</label>
+                <input type="file" name="file" id="file" accept=".png, .jpg, .indd, .pdf, .ai, .ait" multiple>
+            </p>
+            <p>
+                <button type="submit">Send</button>
+            </p>
+          </form>
+    </details>
+        <p class="note"><span class= "Ueberschrift">Meeresschnee</span> Wie ein stetiger Schneefall rieseln winzige organische Partikel von der Wasseroberfläche auf den Meeresgrund.
+            Auf seinem Weg in die Tiefe wird der Meeresschnee bereits von verschiedenen Organismen und Lebewesen konsumiert. Ozean voller vergessener oder unvollendeter Ideen, Konzepte und Skizzen.</p>
     </div>
+   
     <div class="grid">
     
     
@@ -27,13 +53,12 @@
                     <!-- Bild -->
                     
                     <div>
-                        <img src="img/Blurry.png" alt="blurry " class="masked-image">
+                        <img src="img/Blurry.png" alt="Blurry " class="masked-image">
                     </div>
                     
 
                     <!-- Titel und Kategorie -->
-                    <p>blurry </p>
-                    <p class="note"></p>
+                    <p>Blurry </p>
             </summary>
 
             <div class="details1-content">
@@ -41,29 +66,29 @@
                 <div class="image-gallery"> 
                 
                 <div>
-                <img src="img/Blurry.png" alt="blurry ">
+                <img src="img/Blurry.png" alt="Blurry ">
                 </div>
                 
                 <div>
-                <img src="img/blurry-02.png" alt="blurry ">
+                <img src="img/blurry-02.png" alt="Blurry ">
                 </div>
                 
                 </div>
                 
             <div class="beschreibung">
-                <p>blurry </p><p>friederike</p>
-                <p>Kunstwerke werden mit einem Papier vor der Linse gefilmt/fotografiert, das das Sehen mit einer verbliebenen Sehstärke von zehn Prozent simuliert</p>
-            </div>
+                <p><span class= "title-details1">Blurry </span> Kunstwerke werden mit einem Papier vor der Linse gefilmt/fotografiert, das das Sehen mit einer verbliebenen Sehstärke von zehn Prozent simuliert.</p>
+                <p>Friederike</p>
                 
                 
                 <div class="download-links">
-                    <p>download:</p>
+                    <p>Download:</p>
                     
                     <a href="file/Blurry.png" download class="btn-download">Blurry.png</a><br>   
                     
                     <a href="file/blurry-02.png" download class="btn-download">blurry-02.png</a><br>   
                     
                 </div>
+            </div>
                 
             </div>
         </details>
@@ -77,13 +102,12 @@
                     <!-- Bild -->
                     
                     <div>
-                        <img src="img/Follow.jpg" alt="gitter" class="masked-image">
+                        <img src="img/Follow.jpg" alt="Gitter" class="masked-image">
                     </div>
                     
 
                     <!-- Titel und Kategorie -->
-                    <p>gitter</p>
-                    <p class="note"></p>
+                    <p>Gitter</p>
             </summary>
 
             <div class="details1-content">
@@ -91,29 +115,29 @@
                 <div class="image-gallery"> 
                 
                 <div>
-                <img src="img/Follow.jpg" alt="gitter">
+                <img src="img/Follow.jpg" alt="Gitter">
                 </div>
                 
                 <div>
-                <img src="img/Spirale.jpg" alt="gitter">
+                <img src="img/Spirale.jpg" alt="Gitter">
                 </div>
                 
                 </div>
                 
             <div class="beschreibung">
-                <p>gitter</p><p>friederike</p>
-                <p>auf der Grundlage eines gitters habe ich verschiedene formen geschaffen und anschließend den text darüber positioniert</p>
-            </div>
+                <p><span class= "title-details1">Gitter</span> Auf der Grundlage eines Gitters habe ich verschiedene Formen geschaffen und anschließend den Text darüber positioniert.</p>
+                <p>Friederike</p>
                 
                 
                 <div class="download-links">
-                    <p>download:</p>
+                    <p>Download:</p>
                     
-                    <a href="[object Object]" download class="btn-download">[object Object]</a><br>   
+                    <a href="file/Follow.jpg" download class="btn-download">Follow.jpg</a><br>   
                     
-                    <a href="[object Object]" download class="btn-download">[object Object]</a><br>   
+                    <a href="file/Spirale.jpg" download class="btn-download">Spirale.jpg</a><br>   
                     
                 </div>
+            </div>
                 
             </div>
         </details>
@@ -127,13 +151,12 @@
                     <!-- Bild -->
                     
                     <div>
-                        <img src="img/Fische.jpg" alt="fische" class="masked-image">
+                        <img src="img/Fische.jpg" alt="Fische" class="masked-image">
                     </div>
                     
 
                     <!-- Titel und Kategorie -->
-                    <p>fische</p>
-                    <p class="note"></p>
+                    <p>Fische</p>
             </summary>
 
             <div class="details1-content">
@@ -141,23 +164,23 @@
                 <div class="image-gallery"> 
                 
                 <div>
-                <img src="img/Fische.jpg" alt="fische">
+                <img src="img/Fische.jpg" alt="Fische">
                 </div>
                 
                 </div>
                 
             <div class="beschreibung">
-                <p>fische</p><p>friederike</p>
-                <p>skizze für ein holzschnittmotiv </p>
-            </div>
+                <p><span class= "title-details1">Fische</span> Skizze für ein Holzschnittmotiv.</p>
+                <p>Friederike</p>
                 
                 
                 <div class="download-links">
-                    <p>download:</p>
+                    <p>Download:</p>
                     
                     <a href="file/Fische.jpg" download class="btn-download">Fische.jpg</a><br>   
                     
                 </div>
+            </div>
                 
             </div>
         </details>
@@ -171,13 +194,12 @@
                     <!-- Bild -->
                     
                     <div>
-                        <img src="img/Nebel.jpg" alt="nebel" class="masked-image">
+                        <img src="img/Nebel.jpg" alt="Nebel" class="masked-image">
                     </div>
                     
 
                     <!-- Titel und Kategorie -->
-                    <p>nebel</p>
-                    <p class="note"></p>
+                    <p>Nebel</p>
             </summary>
 
             <div class="details1-content">
@@ -185,23 +207,23 @@
                 <div class="image-gallery"> 
                 
                 <div>
-                <img src="img/Nebel.jpg" alt="nebel">
+                <img src="img/Nebel.jpg" alt="Nebel">
                 </div>
                 
                 </div>
                 
             <div class="beschreibung">
-                <p>nebel</p><p>friederike</p>
-                <p>schnappschuss aus einer bar mit nebel und blauem licht.</p>
-            </div>
+                <p><span class= "title-details1">Nebel</span> Schnappschuss in einer Bar mit Nebel und blauem Licht.</p>
+                <p>Friederike</p>
                 
                 
                 <div class="download-links">
-                    <p>download:</p>
+                    <p>Download:</p>
                     
                     <a href="file/Nebel.jpg" download class="btn-download">Nebel.jpg</a><br>   
                     
                 </div>
+            </div>
                 
             </div>
         </details>
@@ -215,13 +237,12 @@
                     <!-- Bild -->
                     
                     <div>
-                        <img src="img/Felsen.jpg" alt="brückenfelsen" class="masked-image">
+                        <img src="img/Felsen.jpg" alt="Brückenfelsen" class="masked-image">
                     </div>
                     
 
                     <!-- Titel und Kategorie -->
-                    <p>brückenfelsen</p>
-                    <p class="note"></p>
+                    <p>Brückenfelsen</p>
             </summary>
 
             <div class="details1-content">
@@ -229,23 +250,23 @@
                 <div class="image-gallery"> 
                 
                 <div>
-                <img src="img/Felsen.jpg" alt="brückenfelsen">
+                <img src="img/Felsen.jpg" alt="Brückenfelsen">
                 </div>
                 
                 </div>
                 
             <div class="beschreibung">
-                <p>brückenfelsen</p><p>friederike</p>
-                <p>collage eines ausgeschnittenen felsens und dem Foto einer brücke mit langen seilen, die in alle Richtungen zeigen.</p>
-            </div>
+                <p><span class= "title-details1">Brückenfelsen</span> Collage eines ausgeschnittenen Felsens und dem Foto einer Brücke mit langen Seilen, die in alle Richtungen zeigen.</p>
+                <p>Friederike</p>
                 
                 
                 <div class="download-links">
-                    <p>download:</p>
+                    <p>Download:</p>
                     
                     <a href="file/Felsen.jpg" download class="btn-download">Felsen.jpg</a><br>   
                     
                 </div>
+            </div>
                 
             </div>
         </details>
@@ -259,13 +280,12 @@
                     <!-- Bild -->
                     
                     <div>
-                        <img src="img/Eisblume.jpg" alt="eisblume" class="masked-image">
+                        <img src="img/Eisblume.jpg" alt="Eisblume" class="masked-image">
                     </div>
                     
 
                     <!-- Titel und Kategorie -->
-                    <p>eisblume</p>
-                    <p class="note"></p>
+                    <p>Eisblume</p>
             </summary>
 
             <div class="details1-content">
@@ -273,23 +293,23 @@
                 <div class="image-gallery"> 
                 
                 <div>
-                <img src="img/Eisblume.jpg" alt="eisblume">
+                <img src="img/Eisblume.jpg" alt="Eisblume">
                 </div>
                 
                 </div>
                 
             <div class="beschreibung">
-                <p>eisblume</p><p>friederike</p>
-                <p>fotoserie eingefrorener blumen</p>
-            </div>
+                <p><span class= "title-details1">Eisblume</span> Fotoserie eingefrorener Blumen.</p>
+                <p>Friederike</p>
                 
                 
                 <div class="download-links">
-                    <p>download:</p>
+                    <p>Download:</p>
                     
                     <a href="file/Eisblume.jpg" download class="btn-download">Eisblume.jpg</a><br>   
                     
                 </div>
+            </div>
                 
             </div>
         </details>
@@ -303,13 +323,12 @@
                     <!-- Bild -->
                     
                     <div>
-                        <img src="img/Schal.png" alt="schal" class="masked-image">
+                        <img src="img/Verzogen3.png" alt="Visual Voices" class="masked-image">
                     </div>
                     
 
                     <!-- Titel und Kategorie -->
-                    <p>schal</p>
-                    <p class="note"></p>
+                    <p>Visual Voices</p>
             </summary>
 
             <div class="details1-content">
@@ -317,71 +336,26 @@
                 <div class="image-gallery"> 
                 
                 <div>
-                <img src="img/Schal.png" alt="schal">
+                <img src="img/Verzogen3.png" alt="Visual Voices">
+                </div>
+                
+                <div>
+                <img src="img/Verzogen2.png" alt="Visual Voices">
+                </div>
+                
+                <div>
+                <img src="img/Verzogen.png" alt="Visual Voices">
                 </div>
                 
                 </div>
                 
             <div class="beschreibung">
-                <p>schal</p><p></p>
-                <p>Beschreibung acht</p>
-            </div>
+                <p><span class= "title-details1">Visual Voices</span> Scan Experimente</p>
+                <p>Kaja</p>
                 
                 
                 <div class="download-links">
-                    <p>download:</p>
-                    
-                    <a href="img/Schal.png" download class="btn-download">Schal.png</a><br>   
-                    
-                </div>
-                
-            </div>
-        </details>
-    </div>
-    
-    
-    <div class="post default-position">
-        <details class="details1">
-            <summary>
-                    
-                    <!-- Bild -->
-                    
-                    <div>
-                        <img src="img/Verzogen3.png" alt="visual voices" class="masked-image">
-                    </div>
-                    
-
-                    <!-- Titel und Kategorie -->
-                    <p>visual voices</p>
-                    <p class="note"></p>
-            </summary>
-
-            <div class="details1-content">
-                
-                <div class="image-gallery"> 
-                
-                <div>
-                <img src="img/Verzogen3.png" alt="visual voices">
-                </div>
-                
-                <div>
-                <img src="img/Verzogen2.png" alt="visual voices">
-                </div>
-                
-                <div>
-                <img src="img/Verzogen.png" alt="visual voices">
-                </div>
-                
-                </div>
-                
-            <div class="beschreibung">
-                <p>visual voices</p><p></p>
-                <p>scan experimente</p>
-            </div>
-                
-                
-                <div class="download-links">
-                    <p>download:</p>
+                    <p>Download:</p>
                     
                     <a href="file/Verzogen3.png" download class="btn-download">Verzogen3.png</a><br>   
                     
@@ -390,6 +364,7 @@
                     <a href="file/Verzogen.png" download class="btn-download">Verzogen.png</a><br>   
                     
                 </div>
+            </div>
                 
             </div>
         </details>
@@ -403,13 +378,12 @@
                     <!-- Bild -->
                     
                     <div>
-                        <img src="img/Schalsw.png" alt="gewinner*in" class="masked-image">
+                        <img src="img/Schalsw.png" alt="Gewinner*in" class="masked-image">
                     </div>
                     
 
                     <!-- Titel und Kategorie -->
-                    <p>gewinner*in</p>
-                    <p class="note"></p>
+                    <p>Gewinner*in</p>
             </summary>
 
             <div class="details1-content">
@@ -417,23 +391,29 @@
                 <div class="image-gallery"> 
                 
                 <div>
-                <img src="img/Schalsw.png" alt="gewinner*in">
+                <img src="img/Schalsw.png" alt="Gewinner*in">
+                </div>
+                
+                <div>
+                <img src="img/Schal.png" alt="Gewinner*in">
                 </div>
                 
                 </div>
                 
             <div class="beschreibung">
-                <p>gewinner*in</p><p>kaja</p>
-                <p>ein entwurf für einen schal für eine projekt zum thema brettspielsammlung.</p>
-            </div>
+                <p><span class= "title-details1">Gewinner*in</span> Ein Entwurf für einen Schal für ein Projekt zum Thema Brettspielsammlung.</p>
+                <p>Kaja</p>
                 
                 
                 <div class="download-links">
-                    <p>download:</p>
+                    <p>Download:</p>
                     
-                    <a href="img/Schalsw.png" download class="btn-download">Schalsw.png</a><br>   
+                    <a href="file/Schalsw.png" download class="btn-download">Schalsw.png</a><br>   
+                    
+                    <a href="file/Schal.png" download class="btn-download">Schal.png</a><br>   
                     
                 </div>
+            </div>
                 
             </div>
         </details>
@@ -447,13 +427,12 @@
                     <!-- Bild -->
                     
                     <div>
-                        <img src="img/TypeStruktur.png" alt="university duties" class="masked-image">
+                        <img src="img/TypeStruktur.png" alt="University Duties" class="masked-image">
                     </div>
                     
 
                     <!-- Titel und Kategorie -->
-                    <p>university duties</p>
-                    <p class="note"></p>
+                    <p>University Duties</p>
             </summary>
 
             <div class="details1-content">
@@ -461,23 +440,23 @@
                 <div class="image-gallery"> 
                 
                 <div>
-                <img src="img/TypeStruktur.png" alt="university duties">
+                <img src="img/TypeStruktur.png" alt="University Duties">
                 </div>
                 
                 </div>
                 
             <div class="beschreibung">
-                <p>university duties</p><p>kaja</p>
-                <p>Plakat „Extending sister Corita Kent’s Immaculate Heart College Art Department Rules“</p>
-            </div>
+                <p><span class= "title-details1">University Duties</span> Plakat „Extending sister Corita Kent’s Immaculate Heart College Art Department Rules“</p>
+                <p>Kaja</p>
                 
                 
                 <div class="download-links">
-                    <p>download:</p>
+                    <p>Download:</p>
                     
                     <a href="img/TypeStruktur.png" download class="btn-download">TypeStruktur.png</a><br>   
                     
                 </div>
+            </div>
                 
             </div>
         </details>
@@ -491,13 +470,12 @@
                     <!-- Bild -->
                     
                     <div>
-                        <img src="img/Wavy.png" alt="moor times" class="masked-image">
+                        <img src="img/Wavy.png" alt="Moor Times" class="masked-image">
                     </div>
                     
 
                     <!-- Titel und Kategorie -->
-                    <p>moor times</p>
-                    <p class="note"></p>
+                    <p>Moor Times</p>
             </summary>
 
             <div class="details1-content">
@@ -505,23 +483,23 @@
                 <div class="image-gallery"> 
                 
                 <div>
-                <img src="img/Wavy.png" alt="moor times">
+                <img src="img/Wavy.png" alt="Moor Times">
                 </div>
                 
                 </div>
                 
             <div class="beschreibung">
-                <p>moor times</p><p>kaja</p>
-                <p>ein entwurf für eine schrift, bei der formen inspiriert von karten von mooren auf die times new roman eingezeichnet wurden.</p>
-            </div>
+                <p><span class= "title-details1">Moor Times</span> Ein Entwurf für eine Schrift, bei der Formen inspiriert von Karten von Mooren auf die Times New Roman eingezeichnet wurden.</p>
+                <p>Kaja</p>
                 
                 
                 <div class="download-links">
-                    <p>download:</p>
+                    <p>Download:</p>
                     
                     <a href="img/Wavy.png" download class="btn-download">Wavy.png</a><br>   
                     
                 </div>
+            </div>
                 
             </div>
         </details>
@@ -535,13 +513,12 @@
                     <!-- Bild -->
                     
                     <div>
-                        <img src="img/royals-02.png" alt="royals" class="masked-image">
+                        <img src="img/royals-02.png" alt="Royals" class="masked-image">
                     </div>
                     
 
                     <!-- Titel und Kategorie -->
-                    <p>royals</p>
-                    <p class="note"></p>
+                    <p>Royals</p>
             </summary>
 
             <div class="details1-content">
@@ -549,35 +526,29 @@
                 <div class="image-gallery"> 
                 
                 <div>
-                <img src="img/royals-02.png" alt="royals">
+                <img src="img/royals-02.png" alt="Royals">
                 </div>
                 
                 <div>
-                <img src="img/royals-01.png" alt="royals">
-                </div>
-                
-                <div>
-                <img src="img/royals-03.png" alt="royals">
+                <img src="img/royals-01.png" alt="Royals">
                 </div>
                 
                 </div>
                 
             <div class="beschreibung">
-                <p>royals</p><p></p>
-                <p>verwendung des photoshop filters „relief“ auf farbige bilder.</p>
-            </div>
+                <p><span class= "title-details1">Royals</span> Verwendung des Photoshop Filters „Relief“ auf farbige Bilder.</p>
+                <p>Friederike</p>
                 
                 
                 <div class="download-links">
-                    <p>download:</p>
+                    <p>Download:</p>
                     
                     <a href="file/royals-01.png" download class="btn-download">royals-01.png</a><br>   
                     
                     <a href="file/royals-02.png" download class="btn-download">royals-02.png</a><br>   
                     
-                    <a href="file/royals-03.png" download class="btn-download">royals-03.png</a><br>   
-                    
                 </div>
+            </div>
                 
             </div>
         </details>
@@ -591,13 +562,12 @@
                     <!-- Bild -->
                     
                     <div>
-                        <img src="img/gischt.png" alt="gischt" class="masked-image">
+                        <img src="img/gischt.png" alt="Gischt" class="masked-image">
                     </div>
                     
 
                     <!-- Titel und Kategorie -->
-                    <p>gischt</p>
-                    <p class="note"></p>
+                    <p>Gischt</p>
             </summary>
 
             <div class="details1-content">
@@ -605,23 +575,23 @@
                 <div class="image-gallery"> 
                 
                 <div>
-                <img src="img/gischt.png" alt="gischt">
+                <img src="img/gischt.png" alt="Gischt">
                 </div>
                 
                 </div>
                 
             <div class="beschreibung">
-                <p>gischt</p><p></p>
-                <p>desktop hintergrund bild mit photoshop filter „konturen nachzeichnen“ und einfärben.</p>
-            </div>
+                <p><span class= "title-details1">Gischt</span> Desktop Hintergrundbild mit Photoshop Filter „Konturen nachzeichnen“ und einfärben.</p>
+                <p>Friederike</p>
                 
                 
                 <div class="download-links">
-                    <p>download:</p>
+                    <p>Download:</p>
                     
                     <a href="file/Gischt.indd" download class="btn-download">Gischt.indd</a><br>   
                     
                 </div>
+            </div>
                 
             </div>
         </details>
@@ -635,13 +605,12 @@
                     <!-- Bild -->
                     
                     <div>
-                        <img src="img/desktop-cover.png" alt="desktop cover" class="masked-image">
+                        <img src="img/desktop-cover.png" alt="Desktop Cover" class="masked-image">
                     </div>
                     
 
                     <!-- Titel und Kategorie -->
-                    <p>desktop cover</p>
-                    <p class="note"></p>
+                    <p>Desktop Cover</p>
             </summary>
 
             <div class="details1-content">
@@ -649,23 +618,23 @@
                 <div class="image-gallery"> 
                 
                 <div>
-                <img src="img/desktop-cover.png" alt="desktop cover">
+                <img src="img/desktop-cover.png" alt="Desktop Cover">
                 </div>
                 
                 </div>
                 
             <div class="beschreibung">
-                <p>desktop cover</p><p></p>
-                <p>plakat auf der Grundlage des eigenen Desktops.</p>
-            </div>
+                <p><span class= "title-details1">Desktop Cover</span> Plakat auf der Grundlage des eigenen Desktops.</p>
+                <p>Friederike</p>
                 
                 
                 <div class="download-links">
-                    <p>download:</p>
+                    <p>Download:</p>
                     
                     <a href="file/desktop-cover.indd" download class="btn-download">desktop-cover.indd</a><br>   
                     
                 </div>
+            </div>
                 
             </div>
         </details>
@@ -679,13 +648,12 @@
                     <!-- Bild -->
                     
                     <div>
-                        <img src="img/Soundmap.png" alt="soundmap" class="masked-image">
+                        <img src="img/Soundmap.png" alt="Soundmap" class="masked-image">
                     </div>
                     
 
                     <!-- Titel und Kategorie -->
-                    <p>soundmap</p>
-                    <p class="note"></p>
+                    <p>Soundmap</p>
             </summary>
 
             <div class="details1-content">
@@ -693,23 +661,23 @@
                 <div class="image-gallery"> 
                 
                 <div>
-                <img src="img/Soundmap.png" alt="soundmap">
+                <img src="img/Soundmap.png" alt="Soundmap">
                 </div>
                 
                 </div>
                 
             <div class="beschreibung">
-                <p>soundmap</p><p></p>
-                <p>Geräusche in meinem Zimmer als abstrakte Symbole verbildlicht.</p>
-            </div>
+                <p><span class= "title-details1">Soundmap</span> Geräusche in meinem Zimmer als abstrakte Symbole verbildlicht.</p>
+                <p>Friederike</p>
                 
                 
                 <div class="download-links">
-                    <p>download:</p>
+                    <p>Download:</p>
                     
                     <a href="file/Soundmap-Zimmer.pdf" download class="btn-download">Soundmap-Zimmer.pdf</a><br>   
                     
                 </div>
+            </div>
                 
             </div>
         </details>
@@ -723,13 +691,12 @@
                     <!-- Bild -->
                     
                     <div>
-                        <img src="img/lina-bookbuilding.jpg" alt="a book is my home" class="masked-image">
+                        <img src="img/lina-bookbuilding.jpg" alt="A book is my home" class="masked-image">
                     </div>
                     
 
                     <!-- Titel und Kategorie -->
-                    <p>a book is my home</p>
-                    <p class="note"></p>
+                    <p>A book is my home</p>
             </summary>
 
             <div class="details1-content">
@@ -737,23 +704,23 @@
                 <div class="image-gallery"> 
                 
                 <div>
-                <img src="img/lina-bookbuilding.jpg" alt="a book is my home">
+                <img src="img/lina-bookbuilding.jpg" alt="A book is my home">
                 </div>
                 
                 </div>
                 
             <div class="beschreibung">
-                <p>a book is my home</p><p>lina lara alvarez</p>
-                <p>einschreibeaufgabe für der kurs «a book is a building» wise 24/25. die idee ist ein buch auf die innere Struktur und fassade von mein Kindheitshaus zu gestalten</p>
-            </div>
+                <p><span class= "title-details1">A book is my home</span> Einschreibeaufgabe für den Kurs «A book is a building» WiSe 24/25. Die Idee ist es ein Buch basierend auf der inneren Struktur und Fassade von meinem Kindheitshaus zu gestalten.</p>
+                <p>Lina Lara Alvarez</p>
                 
                 
                 <div class="download-links">
-                    <p>download:</p>
+                    <p>Download:</p>
                     
                     <a href="file/lina-bookbuilding.jpg" download class="btn-download">lina-bookbuilding.jpg</a><br>   
                     
                 </div>
+            </div>
                 
             </div>
         </details>
@@ -767,13 +734,12 @@
                     <!-- Bild -->
                     
                     <div>
-                        <img src="img/colab.png" alt="colab teams team" class="masked-image">
+                        <img src="img/colab.png" alt="CoLAB Teams Team" class="masked-image">
                     </div>
                     
 
                     <!-- Titel und Kategorie -->
-                    <p>colab teams team</p>
-                    <p class="note"></p>
+                    <p>CoLAB Teams Team</p>
             </summary>
 
             <div class="details1-content">
@@ -781,23 +747,23 @@
                 <div class="image-gallery"> 
                 
                 <div>
-                <img src="img/colab.png" alt="colab teams team">
+                <img src="img/colab.png" alt="CoLAB Teams Team">
                 </div>
                 
                 </div>
                 
             <div class="beschreibung">
-                <p>colab teams team</p><p>colab</p>
-                <p>eine einladung ins CoLAB Teams Team</p>
-            </div>
+                <p><span class= "title-details1">CoLAB Teams Team</span> Eine Einladung ins CoLAB Teams Team.</p>
+                <p>CoLAB</p>
                 
                 
                 <div class="download-links">
-                    <p>download:</p>
+                    <p>Download:</p>
                     
                     <a href="file/colab.png" download class="btn-download">colab.png</a><br>   
                     
                 </div>
+            </div>
                 
             </div>
         </details>
@@ -811,13 +777,12 @@
                     <!-- Bild -->
                     
                     <div>
-                        <img src="img/gischt.png" alt="gischt" class="masked-image">
+                        <img src="img/DELADOSE.png" alt="DELADOSE" class="masked-image">
                     </div>
                     
 
                     <!-- Titel und Kategorie -->
-                    <p>gischt</p>
-                    <p class="note"></p>
+                    <p>DELADOSE</p>
             </summary>
 
             <div class="details1-content">
@@ -825,23 +790,23 @@
                 <div class="image-gallery"> 
                 
                 <div>
-                <img src="img/gischt.png" alt="gischt">
+                <img src="img/DELADOSE.png" alt="DELADOSE">
                 </div>
                 
                 </div>
                 
             <div class="beschreibung">
-                <p>gischt</p><p></p>
-                <p>desktop hintergrund bild mit photoshop filter „konturen nachzeichnen“ und einfärben.</p>
-            </div>
+                <p><span class= "title-details1">DELADOSE</span> Farbrolle Cutout Experiment</p>
+                <p>Alexander Delaporte</p>
                 
                 
                 <div class="download-links">
-                    <p>download:</p>
+                    <p>Download:</p>
                     
-                    <a href="file/Gischt.indd" download class="btn-download">Gischt.indd</a><br>   
+                    <a href="file/DELADOSE.png" download class="btn-download">DELADOSE.png</a><br>   
                     
                 </div>
+            </div>
                 
             </div>
         </details>
@@ -855,13 +820,12 @@
                     <!-- Bild -->
                     
                     <div>
-                        <img src="img/desktop-cover.png" alt="desktop cover" class="masked-image">
+                        <img src="img/aend-logo.png" alt="Aend Logo Design" class="masked-image">
                     </div>
                     
 
                     <!-- Titel und Kategorie -->
-                    <p>desktop cover</p>
-                    <p class="note"></p>
+                    <p>Aend Logo Design</p>
             </summary>
 
             <div class="details1-content">
@@ -869,23 +833,23 @@
                 <div class="image-gallery"> 
                 
                 <div>
-                <img src="img/desktop-cover.png" alt="desktop cover">
+                <img src="img/aend-logo.png" alt="Aend Logo Design">
                 </div>
                 
                 </div>
                 
             <div class="beschreibung">
-                <p>desktop cover</p><p></p>
-                <p>plakat auf der Grundlage des eigenen Desktops.</p>
-            </div>
+                <p><span class= "title-details1">Aend Logo Design</span> Type Logo Experiment in einem 5x5 Grid</p>
+                <p>Alexander Delaporte</p>
                 
                 
                 <div class="download-links">
-                    <p>download:</p>
+                    <p>Download:</p>
                     
-                    <a href="file/desktop-cover.indd" download class="btn-download">desktop-cover.indd</a><br>   
+                    <a href="file/aend-logo.png" download class="btn-download">aend-logo.png</a><br>   
                     
                 </div>
+            </div>
                 
             </div>
         </details>
@@ -899,13 +863,12 @@
                     <!-- Bild -->
                     
                     <div>
-                        <img src="img/Wavy.png" alt="moor times" class="masked-image">
+                        <img src="img/charly-schrift.png" alt="Geplottete Schrift" class="masked-image">
                     </div>
                     
 
                     <!-- Titel und Kategorie -->
-                    <p>moor times</p>
-                    <p class="note"></p>
+                    <p>Geplottete Schrift</p>
             </summary>
 
             <div class="details1-content">
@@ -913,23 +876,23 @@
                 <div class="image-gallery"> 
                 
                 <div>
-                <img src="img/Wavy.png" alt="moor times">
+                <img src="img/charly-schrift.png" alt="Geplottete Schrift">
                 </div>
                 
                 </div>
                 
             <div class="beschreibung">
-                <p>moor times</p><p>kaja</p>
-                <p>ein entwurf für eine schrift, bei der formen inspiriert von karten von mooren auf die times new roman eingezeichnet wurden.</p>
-            </div>
+                <p><span class= "title-details1">Geplottete Schrift</span> Meine eigene Schrift „DASfont“ in Teile zerlegt als Experiment.</p>
+                <p>Charly</p>
                 
                 
                 <div class="download-links">
-                    <p>download:</p>
+                    <p>Download:</p>
                     
-                    <a href="img/Wavy.png" download class="btn-download">Wavy.png</a><br>   
+                    <a href="file/charly-schrift.jpg" download class="btn-download">charly-schrift.jpg</a><br>   
                     
                 </div>
+            </div>
                 
             </div>
         </details>
@@ -943,13 +906,12 @@
                     <!-- Bild -->
                     
                     <div>
-                        <img src="img/Eisblume.jpg" alt="eisblume" class="masked-image">
+                        <img src="img/kater-skizzen.png" alt="Der gestiefelte Kater" class="masked-image">
                     </div>
                     
 
                     <!-- Titel und Kategorie -->
-                    <p>eisblume</p>
-                    <p class="note"></p>
+                    <p>Der gestiefelte Kater</p>
             </summary>
 
             <div class="details1-content">
@@ -957,23 +919,23 @@
                 <div class="image-gallery"> 
                 
                 <div>
-                <img src="img/Eisblume.jpg" alt="eisblume">
+                <img src="img/kater-skizzen.png" alt="Der gestiefelte Kater">
                 </div>
                 
                 </div>
                 
             <div class="beschreibung">
-                <p>eisblume</p><p></p>
-                <p>fotoserie eingefrorener blumen</p>
-            </div>
+                <p><span class= "title-details1">Der gestiefelte Kater</span> Skizze für ein Plakat zum Theaterstück der gestiefelte Kater.</p>
+                <p>Marcel</p>
                 
                 
                 <div class="download-links">
-                    <p>download:</p>
+                    <p>Download:</p>
                     
-                    <a href="img/Eisblume.jpg" download class="btn-download">Eisblume.jpg</a><br>   
+                    <a href="file/kater-skizzen.png" download class="btn-download">kater-skizzen.png</a><br>   
                     
                 </div>
+            </div>
                 
             </div>
         </details>
@@ -993,7 +955,6 @@
 
                     <!-- Titel und Kategorie -->
                     <p>Familienwappen</p>
-                    <p class="note"></p>
             </summary>
 
             <div class="details1-content">
@@ -1015,17 +976,17 @@
                 </div>
                 
             <div class="beschreibung">
-                <p>Familienwappen</p><p>Elisa</p>
-                <p>Skizzen für ein Familienwappen aus den Buchstaben j, e und k</p>
-            </div>
+                <p><span class= "title-details1">Familienwappen</span> Skizzen für ein Familienwappen aus den Buchstaben j, e und k.</p>
+                <p>Elisa</p>
                 
                 
                 <div class="download-links">
-                    <p>download:</p>
+                    <p>Download:</p>
                     
                     <a href="file/Familienwappen.ai" download class="btn-download">Familienwappen.ai</a><br>   
                     
                 </div>
+            </div>
                 
             </div>
         </details>
@@ -1045,7 +1006,6 @@
 
                     <!-- Titel und Kategorie -->
                     <p>Buchblume</p>
-                    <p class="note"></p>
             </summary>
 
             <div class="details1-content">
@@ -1059,17 +1019,17 @@
                 </div>
                 
             <div class="beschreibung">
-                <p>Buchblume</p><p>Elisa</p>
-                <p>Idee auf den Seiten eines zerfallenen Buches Blumen zu malen</p>
-            </div>
+                <p><span class= "title-details1">Buchblume</span> Idee auf den Seiten eines zerfallenen Buches Blumen zu malen.</p>
+                <p>Elisa</p>
                 
                 
                 <div class="download-links">
-                    <p>download:</p>
+                    <p>Download:</p>
                     
                     <a href="file/Buchblume.jpg" download class="btn-download">Buchblume.jpg</a><br>   
                     
                 </div>
+            </div>
                 
             </div>
         </details>
@@ -1089,7 +1049,6 @@
 
                     <!-- Titel und Kategorie -->
                     <p>Licht und Schatten</p>
-                    <p class="note"></p>
             </summary>
 
             <div class="details1-content">
@@ -1103,17 +1062,17 @@
                 </div>
                 
             <div class="beschreibung">
-                <p>Licht und Schatten</p><p>Elisa</p>
-                <p>versuch mit analoger fotografie licht und schatten einzufangen</p>
-            </div>
+                <p><span class= "title-details1">Licht und Schatten</span> Versuch mit analoger Fotografie Licht und Schatten einzufangen.</p>
+                <p>Elisa</p>
                 
                 
                 <div class="download-links">
-                    <p>download:</p>
+                    <p>Download:</p>
                     
                     <a href="file/LichtundSchatten.jpg" download class="btn-download">LichtundSchatten.jpg</a><br>   
                     
                 </div>
+            </div>
                 
             </div>
         </details>
@@ -1127,13 +1086,12 @@
                     <!-- Bild -->
                     
                     <div>
-                        <img src="img/chris-muster-01.png" alt="illustrator verläufe experiment" class="masked-image">
+                        <img src="img/chris-muster-01.png" alt="Illustrator Verläufe Experiment" class="masked-image">
                     </div>
                     
 
                     <!-- Titel und Kategorie -->
-                    <p>illustrator verläufe experiment</p>
-                    <p class="note"></p>
+                    <p>Illustrator Verläufe Experiment</p>
             </summary>
 
             <div class="details1-content">
@@ -1141,70 +1099,32 @@
                 <div class="image-gallery"> 
                 
                 <div>
-                <img src="img/chris-muster-01.png" alt="illustrator verläufe experiment">
+                <img src="img/chris-muster-01.png" alt="Illustrator Verläufe Experiment">
                 </div>
                 
                 <div>
-                <img src="img/chris-muster-02.png" alt="illustrator verläufe experiment">
-                </div>
-                
-                <div>
-                <img src="img/chris-muster-03.png" alt="illustrator verläufe experiment">
-                </div>
-                
-                <div>
-                <img src="img/chris-muster-04.png" alt="illustrator verläufe experiment">
-                </div>
-                
-                <div>
-                <img src="img/chris-muster-05.png" alt="illustrator verläufe experiment">
+                <img src="img/chris-muster-02.png" alt="Illustrator Verläufe Experiment">
                 </div>
                 
                 </div>
                 
             <div class="beschreibung">
-                <p>illustrator verläufe experiment</p><p>chris</p>
-                <p>ein paar auf verläufen basierende muster</p>
-            </div>
+                <p><span class= "title-details1">Illustrator Verläufe Experiment</span> Ein paar auf Verläufen basierende Muster.</p>
+                <p>Chris</p>
                 
                 
                 <div class="download-links">
-                    <p>download:</p>
+                    <p>Download:</p>
                     
                     <a href="file/Chris-Verläufe.ai" download class="btn-download">Chris-Verläufe.ai</a><br>   
                     
                 </div>
+            </div>
                 
             </div>
         </details>
     </div>
     
-    <details class="details2">
-        <summary>
-            <a class="upload-btn">upload</a>
-            <p class="Erklärung">Hochladen von alten Projekten, verworfenen Ideen, die anderen als Inspiration dienen können, als Bilder oder Projektdatei.</p>
-        </summary>
-        <form name="contact" method="POST" data-netlify="true" enctype="multipart/form-data">
-            <input type="hidden" name="form-name" value="contact">
-            <p>
-                <label>name: <input type="text" name="name" required></label>
-            </p>
-            <p>
-                <label>titel: <input type="text" name="titel" required></label>
-            </p>
-          
-            <p>
-                <label>beschreibung: <textarea name="description" rows="6" required></textarea></label>
-            </p>
-            <p>
-                <label for="file">dateien</label>
-                <input type="file" name="file" id="file" accept=".png, .jpg, .indd, .pdf, .ai, .ait" multiple>
-            </p>
-            <p>
-                <button type="submit">Send</button>
-            </p>
-          </form>
-    </details>
 </div>
     <script src=" /js/main.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js"   integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="   crossorigin="anonymous"></script>

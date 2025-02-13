@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const randomX = Math.random() * window.innerWidth; // Werte zwischen 0 und Fensterbreite
         const randomY = Math.random() * containerHeight - containerHeight / 2; // Zufällige Y-Position
         const startY = Math.random() * -500; // Zufällige Start-Y-Position (oberhalb des Bildschirms)
-        const scale = Math.max(0.8, Math.min(5, 3 - randomZ / 50)); // Skaliert nach Z
+        const scale = Math.max(0.4, Math.min(4, 2 - randomZ / 600)); // Skaliert nach Z
         const speedFactor = (400 + randomZ) / 400; // Geschwindigkeit abhängig von Tiefe
         const animationDuration = 10 + speedFactor * 30; // Dauer: 10s bis 40s
         const animationDelay = Math.random() * 3; // Zufällige Verzögerung (0 bis 5 Sekunden)
@@ -39,8 +39,8 @@ $(document).ready(function(){
         let keyframes = `
             @keyframes ${animationName} {
                 0% { transform: translateZ(0px) rotateX(0deg) rotateY(0deg); }
-                50% { transform: translateZ(${randomRange(20, 50)}px) rotateX(${randomRange(150, 300)}deg) rotateY(${randomRange(100, 200)}deg); }
-                100% { transform: translateZ(${randomRange(40, 120)}px) rotateX(360deg) rotateY(-360deg); }
+                50% { transform: translateZ(${randomRange(10, 50)}px) rotateX(${randomRange(150, 300)}deg) rotateY(${randomRange(100, 200)}deg); }
+                100% { transform: translateZ(${randomRange(40, 210)}px) rotateX(360deg) rotateY(-360deg); }
             }
         `;
 
@@ -78,10 +78,17 @@ $(document).ready(function(){
         const scrollY = window.scrollY; // Aktuelle Scroll-Position
 
         // **Berechnung für Mitte**
-        const postWidth = 350; // Feste Breite für zentrierte Posts
-        const postHeight = post.offsetHeight; // Dynamische Höhe je nach Inhalt
+        const postWidth = post.offsetWidth; // Feste Breite für zentrierte Posts
+        const postHeight = 200; // Dynamische Höhe je nach Inhalt
         const centerX = (viewportWidth - postWidth) / 2;
         const centerY = scrollY + (viewportHeight - postHeight) / 2;
+
+        // **Verschiebung nach links hinzufügen**
+        const offsetX = viewportWidth * 0.4; // % der Viewport-Breite
+        const adjustedX = centerX - offsetX;
+        // **Verschiebung nach oben hinzufügen**
+        const offsetY = viewportHeight * 0.8; // % der Viewport-Höhe (20% nach oben)
+        const adjustedY = centerY - offsetY;
 
         // **Fixierte Position setzen**
         post.style.position = "absolute"; // Wichtig: Absolute Positionierung aktivieren
@@ -89,6 +96,8 @@ $(document).ready(function(){
         post.style.height = "auto"; // Höhe je nach Inhalt
         post.style.top = `${centerY}px`;
         post.style.left = `${centerX}px`;
+        post.style.left = `${adjustedX}px`; // Geänderte X-Position
+        post.style.top = `${adjustedY}px`;
 
         // **Animation & Skalierung deaktivieren**
         post.style.scale = "1";
@@ -105,7 +114,14 @@ $(document).ready(function(){
     }
             });
         });
-        
+    });
+    document.addEventListener("click", function(event) {
+        document.querySelectorAll(".details1").forEach(details => {
+            // Falls das <details> geöffnet ist und der Klick NICHT innerhalb des <details> war:
+            if (details.open && !details.contains(event.target)) {
+                details.removeAttribute("open"); // Schließt das <details>
+            }
+        });
     });
     const masks = [
         "Maske_02.png",
