@@ -285,11 +285,15 @@ button {
     50% { transform: translateZ(35px) rotateX(140deg) rotateY(-180deg); }
     100% { transform: translateZ(120px) rotateX(360deg) rotateY(-360deg); }
 }
-@media (min-width: 1440px) {
+@media (min-width: 1920px) {
     .note {
         font-size: 1.2rem;
+        width: 35vw;
     }
     .Erklärung{
         font-size: 1.2rem;
+    }
+    form {
+        height: 60vh;
     }
 }
