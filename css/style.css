@@ -296,4 +296,9 @@ button {
     form {
         height: 60vh;
     }
+    textarea {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
 }
